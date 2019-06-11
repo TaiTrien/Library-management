@@ -1,0 +1,246 @@
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\Library Management.exe
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\Library Management.pdb
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\GUI.csprojAssemblyReference.cache
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmLogin.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.Properties.Resources.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library Management.exe
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library Management.pdb
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmMainMenu.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmMenuBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmBooksManage.resources
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Data.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Utils.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraBars.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraGrid.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraLayout.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraTreeList.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Office.v17.1.Core.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Data.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Utils.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraBars.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraGrid.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraLayout.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Office.v17.1.Core.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\GUI.csproj.CopyComplete
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmSearchBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewReaders.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewTitles.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmBorrowBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmReturnBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmTitlesManage.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmReadersManage.resources
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Xpo.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Xpo.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmMenuReports.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmRPBorrowedBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmLateReturn.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAuthsManage.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmTypesManage.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewAuths.resources
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\Library Management.exe
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\Library Management.pdb
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Data.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Utils.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Xpo.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraBars.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraGrid.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraLayout.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraTreeList.v17.1.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Office.v17.1.Core.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Data.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Utils.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Xpo.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraBars.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraGrid.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraLayout.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\DevExpress.Office.v17.1.Core.xml
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraGrid.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.XtraTreeList.v17.1.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\GUI.csprojAssemblyReference.cache
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAddNewAuths.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAddNewBooks.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAuthsManage.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmLateReturn.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmRPBorrowedBooks.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmMenuReports.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmReadersManage.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmTitlesManage.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAddNewReaders.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAddNewTitles.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmBooksManage.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmBorrowBooks.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmLogin.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmMainMenu.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmMenuBooks.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmReturnBooks.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmSearchBooks.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmTypesManage.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.Properties.Resources.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\GUI.csproj.CopyComplete
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library Management.exe
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library Management.pdb
