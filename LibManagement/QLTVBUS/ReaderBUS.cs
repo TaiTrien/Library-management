@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using QLTVDAL;
 using QLTVDTO;
 
-namespace QLTCBUS
+namespace QLTVBUS
 {
     public class ReaderBUS
     {

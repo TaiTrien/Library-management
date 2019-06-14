@@ -35,18 +35,12 @@ CREATE TABLE TACGIA
 CREATE TABLE THEDOCGIA
 (
 	MaThe varchar(30) PRIMARY KEY,
-	MaLoai varchar(30),
 	HoTen varchar(50),
 	NgaySinh date,
 	DiaChi varchar(50),
 	Email varchar(30),
-	NgayLapThe datetime,
-)
-
-CREATE TABLE LOAIDOCGIA
-(
-	MaLoai varchar(30) PRIMARY KEY,
-	TenLoai varchar(30)
+	NgayLapThe date,
+	LoaiDocGia varchar(50),
 )
 
 CREATE TABLE NGUOIDUNG

@@ -33,18 +33,20 @@
             this.lbDel = new System.Windows.Forms.Label();
             this.lbAdd = new System.Windows.Forms.Label();
             this.pnFooter = new System.Windows.Forms.Panel();
-            this.dgvReadersManage = new System.Windows.Forms.DataGridView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMod = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvReadersManage = new System.Windows.Forms.DataGridView();
+            this.dgvDocGia = new System.Windows.Forms.DataGridView();
             this.pnFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
             this.SuspendLayout();
             // 
             // lbContact
@@ -105,16 +107,6 @@
             this.pnFooter.Size = new System.Drawing.Size(882, 109);
             this.pnFooter.TabIndex = 5;
             // 
-            // dgvReadersManage
-            // 
-            this.dgvReadersManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReadersManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvReadersManage.Location = new System.Drawing.Point(0, 0);
-            this.dgvReadersManage.Name = "dgvReadersManage";
-            this.dgvReadersManage.RowTemplate.Height = 24;
-            this.dgvReadersManage.Size = new System.Drawing.Size(882, 423);
-            this.dgvReadersManage.TabIndex = 4;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Library_Management.Properties.Resources.facebook;
@@ -156,6 +148,7 @@
             this.btnMod.Size = new System.Drawing.Size(77, 61);
             this.btnMod.TabIndex = 13;
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnDel
             // 
@@ -168,6 +161,7 @@
             this.btnDel.Size = new System.Drawing.Size(85, 59);
             this.btnDel.TabIndex = 12;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
@@ -182,22 +176,48 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // dgvReadersManage
+            // 
+            this.dgvReadersManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReadersManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvReadersManage.Location = new System.Drawing.Point(0, 0);
+            this.dgvReadersManage.Name = "dgvReadersManage";
+            this.dgvReadersManage.RowTemplate.Height = 24;
+            this.dgvReadersManage.Size = new System.Drawing.Size(882, 423);
+            this.dgvReadersManage.TabIndex = 4;
+            // 
+            // dgvDocGia
+            // 
+            this.dgvDocGia.AllowUserToAddRows = false;
+            this.dgvDocGia.AllowUserToDeleteRows = false;
+            this.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocGia.Location = new System.Drawing.Point(0, 0);
+            this.dgvDocGia.Name = "dgvDocGia";
+            this.dgvDocGia.ReadOnly = true;
+            this.dgvDocGia.RowTemplate.Height = 24;
+            this.dgvDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDocGia.Size = new System.Drawing.Size(882, 423);
+            this.dgvDocGia.TabIndex = 6;
+            // 
             // frmReadersManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 559);
+            this.Controls.Add(this.dgvDocGia);
             this.Controls.Add(this.pnFooter);
             this.Controls.Add(this.dgvReadersManage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReadersManage";
             this.Text = "frmMenuReaders";
+            this.Load += new System.EventHandler(this.frmReadersManage_Load);
             this.pnFooter.ResumeLayout(false);
             this.pnFooter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,5 +236,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnFooter;
         private System.Windows.Forms.DataGridView dgvReadersManage;
+        private System.Windows.Forms.DataGridView dgvDocGia;
     }
 }

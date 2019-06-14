@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using QLTVDTO;
@@ -30,7 +31,7 @@ namespace QLTVDAL
             string query = string.Empty;
             query += "INSERT INTO [THEDOCGIA] ([MaThe], [HoTen], [NgaySinh], [DiaChi], [Email], [NgayLapThe], [LoaiDocGia])";
             query += "VALUES (@MaThe,@HoTen,@NgaySinh,@DiaChi,@Email,@NgayLapThe,@LoaiDocGia)";
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 
                 using (SqlCommand cmd = new SqlCommand())
@@ -66,7 +67,7 @@ namespace QLTVDAL
         {
             string query = string.Empty;
             query += "DELETE FROM THEDOCGIA WHERE [MaThe] = @MaThe";
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 
                 using (SqlCommand cmd = new SqlCommand())
@@ -98,7 +99,7 @@ namespace QLTVDAL
             query += "SET HoTen = @HoTen,NgaySinh = @NgaySinh,DiaChi = @DiaChi,Email = @Email,NgayLapThe = @NgayLapThe,LoaiDocGia = @LoaiDocGia ";
             query += "WHERE MaThe = @MaThe";
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 
                 using (SqlCommand cmd = new SqlCommand())
@@ -137,9 +138,9 @@ namespace QLTVDAL
             query += "SELECT [MaThe], [HoTen], [NgaySinh], [DiaChi], [Email], [NgayLapThe], [LoaiDocGia]";
             query += "FROM [THEDOCGIA]";
 
-            List<ReaderDTO> lsKieuNau = new List<ReaderDTO>();
+            List<ReaderDTO> lsreader = new List<ReaderDTO>();
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 
                 using (SqlCommand cmd = new SqlCommand())
@@ -166,7 +167,7 @@ namespace QLTVDAL
                                 rd.Email = reader["Email"].ToString();
                                 rd.DateCreateReader = reader.GetFieldValue<DateTime>(reader.GetOrdinal("NgayLapThe"));
                                 rd.TypeOfReader = reader["LoaiDocGia"].ToString();
-                                lsKieuNau.Add(rd);
+                                lsreader.Add(rd);
                             }
                         }
 
@@ -180,7 +181,7 @@ namespace QLTVDAL
                     }
                 }
             }
-            return lsKieuNau;
+            return lsreader;
         }
     }
 }
