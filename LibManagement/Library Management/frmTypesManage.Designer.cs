@@ -33,18 +33,18 @@
             this.lbDel = new System.Windows.Forms.Label();
             this.lbAdd = new System.Windows.Forms.Label();
             this.pnFooter = new System.Windows.Forms.Panel();
-            this.dgvTypesManage = new System.Windows.Forms.DataGridView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMod = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvTypesManage = new System.Windows.Forms.DataGridView();
             this.pnFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTypesManage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTypesManage)).BeginInit();
             this.SuspendLayout();
             // 
             // lbContact
@@ -105,16 +105,6 @@
             this.pnFooter.Size = new System.Drawing.Size(882, 107);
             this.pnFooter.TabIndex = 9;
             // 
-            // dgvTypesManage
-            // 
-            this.dgvTypesManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTypesManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvTypesManage.Location = new System.Drawing.Point(0, 0);
-            this.dgvTypesManage.Name = "dgvTypesManage";
-            this.dgvTypesManage.RowTemplate.Height = 24;
-            this.dgvTypesManage.Size = new System.Drawing.Size(882, 420);
-            this.dgvTypesManage.TabIndex = 8;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Library_Management.Properties.Resources.facebook;
@@ -156,6 +146,7 @@
             this.btnMod.Size = new System.Drawing.Size(77, 61);
             this.btnMod.TabIndex = 13;
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnDel
             // 
@@ -168,6 +159,7 @@
             this.btnDel.Size = new System.Drawing.Size(85, 59);
             this.btnDel.TabIndex = 12;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
@@ -175,11 +167,22 @@
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(4, 12);
+            this.btnAdd.Location = new System.Drawing.Point(4, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(63, 64);
+            this.btnAdd.Size = new System.Drawing.Size(63, 73);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // dgvTypesManage
+            // 
+            this.dgvTypesManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTypesManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvTypesManage.Location = new System.Drawing.Point(0, 0);
+            this.dgvTypesManage.Name = "dgvTypesManage";
+            this.dgvTypesManage.RowTemplate.Height = 24;
+            this.dgvTypesManage.Size = new System.Drawing.Size(882, 420);
+            this.dgvTypesManage.TabIndex = 8;
             // 
             // frmTypesManage
             // 
@@ -191,12 +194,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTypesManage";
             this.Text = "frmTypesManage";
+            this.Load += new System.EventHandler(this.frmTypesManage_Load);
             this.pnFooter.ResumeLayout(false);
             this.pnFooter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTypesManage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTypesManage)).EndInit();
             this.ResumeLayout(false);
 
         }

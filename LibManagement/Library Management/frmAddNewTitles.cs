@@ -14,6 +14,7 @@ namespace Library_Management
     public partial class frmAddNewTitles : Form
     {
         private titlesBUS titlesBUS;
+        private typeBUS typeBUS;
         private authBUS authBUS;
         public frmAddNewTitles()
         {
@@ -57,8 +58,9 @@ namespace Library_Management
         private void frmAddNewTitles_Load(object sender, EventArgs e)
         {
             titlesBUS = new titlesBUS();
+            typeBUS = new typeBUS();
             authBUS = new authBUS();
-            loadAuthInto_ListBox();
+            loadDataInto_ListBox();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -68,8 +70,8 @@ namespace Library_Management
             titlesDTO.MaDauSach = tbTitlesCode.Text;
             titlesDTO.TenDauSach = tbTitlesName.Text;
             titlesDTO.MaTacGia = lsbAuth.SelectedValue.ToString();
-           // titlesDTO.TheLoai = lsbType.Text;
-
+            titlesDTO.TheLoai = lsbType.SelectedValue.ToString();
+            
             //Add into DB
             bool result = titlesBUS.add(titlesDTO);
             if (result == true)
@@ -77,24 +79,43 @@ namespace Library_Management
             else
                 MessageBox.Show("Thêm đầu sách thất bại");
         }
-        private void loadAuthInto_ListBox()
+        private void loadDataInto_ListBox()
         {
             List<authDTO> listAuth = authBUS.selectedAuth();
+            List<typeDTO> listType = typeBUS.selectedTypes();
             if (lsbAuth == null)
             {
                 MessageBox.Show("DB chưa có thông tin của bất cứ tác giả nào");
                 return;
             }
+            if (lsbType == null)
+            {
+                MessageBox.Show("DB chưa có thông tin của bất cứ thể loại nào");
+                return;
+            }
             lsbAuth.DataSource = new BindingSource(listAuth, String.Empty);
+            lsbType.DataSource = new BindingSource(listType, String.Empty);
+
             lsbAuth.DisplayMember = "TenTacGia";
             lsbAuth.ValueMember = "MaTacGia";
 
-            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[lsbAuth.DataSource];
-            myCurrencyManager.Refresh();
+            lsbType.DisplayMember = "tenTheLoai";
+            lsbType.ValueMember = "maTheLoai";
+
+            CurrencyManager myCurrencyManager1 = (CurrencyManager)this.BindingContext[lsbAuth.DataSource];
+            myCurrencyManager1.Refresh();
+
+            CurrencyManager myCurrencyManager2 = (CurrencyManager)this.BindingContext[lsbType.DataSource];
+            myCurrencyManager2.Refresh();
 
             if (lsbAuth.Items.Count > 0)
             {
                 lsbAuth.SelectedIndex = 0;
+            }
+
+            if (lsbType.Items.Count > 0)
+            {
+                lsbType.SelectedIndex = 0;
             }
 
         }

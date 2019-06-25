@@ -130,3 +130,5 @@ E:\Study\libdev\LibManagement\Library Management\bin\Debug\Library Management.ex
 E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAddAuths.resources
 E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmModAuths.resources
 E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmModTitles.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmAddNewType.resources
+E:\Study\libdev\LibManagement\Library Management\obj\Debug\Library_Management.frmModTypes.resources

@@ -25,6 +25,11 @@ namespace QLTVBUS
             bool isDel = titlesDAL.del(titles);
             return isDel;
         }
+        public bool mod(titlesDTO titles)
+        {
+            bool isMod = titlesDAL.mod(titles);
+            return isMod;
+        }
         public List<titlesDTO> selectedTitle()
         {
             return titlesDAL.selectedTitle();

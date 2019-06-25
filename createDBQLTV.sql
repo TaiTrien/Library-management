@@ -150,3 +150,5 @@ DROP TABLE SACH
 	select * from TACGIA where MaTacGia='23'
 	update TACGIA set MaTacGia='4'
 	delete from DAUSACH where MaDauSach='124124'
+	delete from DAUSACH_TACGIA from DAUSACH INNER JOIN DAUSACH_TACGIA ON DAUSACH.MaDauSach = DAUSACH_TACGIA.MaDauSach
+	Where  DAUSACH_TACGIA.MaDauSach ='1'

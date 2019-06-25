@@ -33,6 +33,11 @@ namespace QLTVBUS
         {
             return authDAL.selectedAuth();
         }
-        
+        public string selectedAuthReferenceToTitle(titlesDTO titlesDTO)
+        {
+            return authDAL.selectedAuthReferenceToTitle(titlesDTO);
+        }
+
+
     }
 }

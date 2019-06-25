@@ -19,7 +19,13 @@ namespace Library_Management
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void frmModAuths_Load(object sender, EventArgs e)
+        {
+            authBUS = new authBUS();
+            authDTO = new authDTO();
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
         {
             bool result;
             //map data from gui
@@ -32,13 +38,6 @@ namespace Library_Management
                 MessageBox.Show("Sửa thất bại.");
             else
                 MessageBox.Show("Sửa thành công.");
-
-        }
-
-        private void frmModAuths_Load(object sender, EventArgs e)
-        {
-            authBUS = new authBUS();
-            authDTO = new authDTO();
         }
     }
 }

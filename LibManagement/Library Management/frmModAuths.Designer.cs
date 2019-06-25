@@ -34,7 +34,7 @@
             this.dtpDob = new System.Windows.Forms.DateTimePicker();
             this.tbName = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -104,19 +104,19 @@
             this.pictureBox4.TabIndex = 75;
             this.pictureBox4.TabStop = false;
             // 
-            // btnAdd
+            // btnMod
             // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(488, 31);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(272, 188);
-            this.btnAdd.TabIndex = 71;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnMod.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMod.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
+            this.btnMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMod.FlatAppearance.BorderSize = 0;
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.Location = new System.Drawing.Point(488, 31);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(272, 188);
+            this.btnMod.TabIndex = 71;
+            this.btnMod.UseVisualStyleBackColor = false;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // pictureBox3
             // 
@@ -146,7 +146,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbAuthCode);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnMod);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -169,7 +169,7 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox tbAuthCode;
         private System.Windows.Forms.PictureBox pictureBox4;
-        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;

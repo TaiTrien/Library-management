@@ -142,7 +142,7 @@
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
             // 
-            // frmAddNewAuths
+            // frmAddAuths
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpDob);
             this.Controls.Add(this.tbName);
-            this.Name = "frmAddNewAuths";
+            this.Name = "frmAddAuths";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm tác giả mới";
             this.Load += new System.EventHandler(this.frmAddNewAuths_Load);

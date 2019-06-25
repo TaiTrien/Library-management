@@ -65,6 +65,12 @@
     <Compile Include="frmAddNewBooks.Designer.cs">
       <DependentUpon>frmAddNewBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddNewType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewType.Designer.cs">
+      <DependentUpon>frmAddNewType.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAuthsManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="frmModTitles.Designer.cs">
       <DependentUpon>frmModTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModTypes.Designer.cs">
+      <DependentUpon>frmModTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRPBorrowedBooks.cs">
       <SubType>Form</SubType>
@@ -181,6 +193,9 @@
     <EmbeddedResource Include="frmAddNewBooks.resx">
       <DependentUpon>frmAddNewBooks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewType.resx">
+      <DependentUpon>frmAddNewType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAuthsManage.resx">
       <DependentUpon>frmAuthsManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModTitles.resx">
       <DependentUpon>frmModTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModTypes.resx">
+      <DependentUpon>frmModTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRPBorrowedBooks.resx">
       <DependentUpon>frmRPBorrowedBooks.cs</DependentUpon>
@@ -416,6 +434,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diary.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

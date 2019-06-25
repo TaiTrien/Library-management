@@ -47,6 +47,7 @@
     <Compile Include="bookDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="titlesDAL.cs" />
+    <Compile Include="typeDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTVDTO\QLTVDTO.csproj">

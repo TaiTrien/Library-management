@@ -22,7 +22,10 @@ namespace QLTVDAL
             string queryAddAuth = string.Empty;
             queryAddAuth += "INSERT INTO DAUSACH_TACGIA (MaDauSach, MaTacGia) ";
             queryAddAuth += "VALUES (@MaDauSach, @MaTacGia)";
-
+            // add type into DauSach_TheLoai table
+            string queryAddType = string.Empty;
+            queryAddType += "INSERT INTO DAUSACH_THELOAI (MaDauSach, MaTheLoai) ";
+            queryAddType += "VALUES (@MaDauSach, @MaTheLoai)";
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
                 // to add titles and name of titles into table DAUSACH
@@ -70,9 +73,32 @@ namespace QLTVDAL
                     }
                 }
             }
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+                using (SqlCommand cmd3 = new SqlCommand())
+                {
+                    cmd3.Connection = con;
+                    cmd3.CommandType = System.Data.CommandType.Text;
+                    cmd3.CommandText = queryAddType;
+                    cmd3.Parameters.AddWithValue("@MaDauSach", titles.MaDauSach);
+                    cmd3.Parameters.AddWithValue("@MaTheLoai", titles.TheLoai);
+                    try
+                    {
+                        con.Open();
+                        cmd3.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
             return true;
         }
-        // to delete titles into DauSach Table and delete titles code & auth code into DauSach_TacGia table
+        // to delete titles from DAUSACH table and referencing table
         public bool del(titlesDTO titles)
         {
             //delete titles from DauSach table
@@ -83,10 +109,10 @@ namespace QLTVDAL
             string queryDelAuth = string.Empty;
             queryDelAuth += "DELETE FROM DAUSACH_TACGIA ";
             queryDelAuth += "WHERE  MaDauSach = @mds ";
-            //delete titles from SACH table
-            string queryDelBook = string.Empty;
-            queryDelBook += "DELETE FROM SACH ";
-            queryDelBook += "WHERE  MaDauSach = @mds ";
+            //delte titles from DauSach_TheLoai table
+            string queryDelType = string.Empty;
+            queryDelType += "DELETE FROM DAUSACH_THELOAI ";
+            queryDelType += "WHERE  MaDauSach = @mds ";
             // to delete titles from table DAUSACH_TACGIA
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
             {
@@ -110,14 +136,14 @@ namespace QLTVDAL
                     }
                 }
             }
-            // to delete titles from table SACH
+            // to delete titles from table DauSach_TheLoai table
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
             {
                 using (SqlCommand cmd2 = new SqlCommand())
                 {
                     cmd2.Connection = con;
                     cmd2.CommandType = System.Data.CommandType.Text;
-                    cmd2.CommandText = queryDelBook;
+                    cmd2.CommandText = queryDelType;
                     cmd2.Parameters.AddWithValue("@mds", titles.MaDauSach);
                     try
                     {
@@ -158,6 +184,98 @@ namespace QLTVDAL
                 }
             }
             
+            return true;
+        }
+        // to modify
+        public bool mod(titlesDTO titles)
+        {
+            //modify titles from DauSach table
+            string queryModTitles = string.Empty;
+            queryModTitles += "UPDATE DAUSACH SET ";
+            queryModTitles += "TenDauSach = @tds WHERE MaDauSach = @mds";
+            //delete author from DauSach_TacGia table
+            string queryModAuth = string.Empty;
+            queryModAuth += "UPDATE DAUSACH_TACGIA SET ";
+            queryModAuth += "MaTacGia = @mtg WHERE  MaDauSach = @mds ";
+            
+            //delte titles from DauSach_TheLoai table
+            string queryModType = string.Empty;
+            queryModType += "UPDATE DAUSACH_THELOAI SET ";
+            queryModType += "MaTheLoai = @mtl WHERE  MaDauSach = @mds ";
+            // to modify titles from table DAUSACH_TACGIA
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = queryModAuth;
+                    cmd.Parameters.AddWithValue("@mds", titles.MaDauSach);
+                    cmd.Parameters.AddWithValue("@mtg", titles.MaTacGia);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            // to modify titles from table DauSach_TheLoai table
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+                using (SqlCommand cmd2 = new SqlCommand())
+                {
+                    cmd2.Connection = con;
+                    cmd2.CommandType = System.Data.CommandType.Text;
+                    cmd2.CommandText = queryModType;
+                    cmd2.Parameters.AddWithValue("@mds", titles.MaDauSach);
+                    cmd2.Parameters.AddWithValue("@mtl", titles.TheLoai);
+                    try
+                    {
+                        con.Open();
+                        cmd2.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            // to modify titles and name of titles from table DAUSACH
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
+            {
+
+                using (SqlCommand cmd3 = new SqlCommand())
+                {
+                    cmd3.Connection = con;
+                    cmd3.CommandType = System.Data.CommandType.Text;
+                    cmd3.CommandText = queryModTitles;
+                    cmd3.Parameters.AddWithValue("@mds", titles.MaDauSach);
+                    cmd3.Parameters.AddWithValue("@tds", titles.TenDauSach);
+                    try
+                    {
+                        con.Open();
+                        cmd3.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+
             return true;
         }
         public List<titlesDTO> selectedTitle()

@@ -15,7 +15,7 @@ namespace Library_Management
         private titlesBUS titlesBUS;
         private titlesDTO titlesDTO;
         private authBUS authBUS;
-        private authDTO authDTO;
+
         public frmTitlesManage()
         {
             InitializeComponent();
@@ -101,17 +101,30 @@ namespace Library_Management
         private void btnMod_Click(object sender, EventArgs e)
         {
             authBUS = new authBUS();
-            List<authDTO> listAuth = authBUS.selectedAuth();
+            titlesDTO titleDTO = new titlesDTO();
+            // to get MaDauSach
+            int rowIndex = dgvTitlesManage.CurrentCell.RowIndex;
+            titleDTO.MaDauSach = dgvTitlesManage.Rows[rowIndex].Cells[0].Value.ToString();
+            titleDTO.TenDauSach = dgvTitlesManage.Rows[rowIndex].Cells[1].Value.ToString();
+            //to get auth Code from DAUSACH_TACGIA
+            //string authReferenceTitle = authBUS.selectedAuthReferenceToTitle(titlesDTO);
 
             frmModTitles frmMod = new frmModTitles();
-            frmMod.ShowDialog();
+            DialogResult warning = new DialogResult();
+            warning = MessageBox.Show("Bạn có chắc chắn muốn sửa đầu sách này?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            if (warning == DialogResult.Yes)
+            {
+                frmMod.tbTitlesCode.Text = titleDTO.MaDauSach;
+                frmMod.tbTitlesName.Text = titleDTO.TenDauSach;
+              //  MessageBox.Show(authReferenceTitle);
+               // frmMod.lsbAuth.SelectedValue = authReferenceTitle;
+                frmMod.tbTitlesCode.ReadOnly = true;
 
-            titlesDTO = new titlesDTO();
-            int rowIndex = dgvTitlesManage.CurrentCell.RowIndex;
-
-            titlesDTO.MaDauSach = dgvTitlesManage.Rows[rowIndex].Cells[0].Value.ToString();
-            titlesDTO.TenDauSach= dgvTitlesManage.Rows[rowIndex].Cells[1].Value.ToString();
-            //titlesDTO.MaTacGia
+                frmMod.ShowDialog();
+            }
+            else return;
+            LoadDataInto_DataGridViewOfTitle();
         }
     }
-}
+    }
+

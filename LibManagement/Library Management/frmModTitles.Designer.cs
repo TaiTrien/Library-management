@@ -31,15 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAuth = new System.Windows.Forms.Label();
             this.lsbAuth = new System.Windows.Forms.ListBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lsbType = new System.Windows.Forms.ListBox();
             this.tbTitlesName = new System.Windows.Forms.TextBox();
             this.tbTitlesCode = new System.Windows.Forms.TextBox();
             this.lbType = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,9 +86,28 @@
             "f"});
             this.lsbAuth.Location = new System.Drawing.Point(533, 30);
             this.lsbAuth.Name = "lsbAuth";
-            this.lsbAuth.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbAuth.Size = new System.Drawing.Size(200, 52);
             this.lsbAuth.TabIndex = 55;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Library_Management.Properties.Resources.agenda;
+            this.pictureBox2.Location = new System.Drawing.Point(34, 150);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Library_Management.Properties.Resources.notebook;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -120,7 +139,6 @@
             "f"});
             this.lsbType.Location = new System.Drawing.Point(533, 150);
             this.lsbType.Name = "lsbType";
-            this.lsbType.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbType.Size = new System.Drawing.Size(200, 52);
             this.lsbType.TabIndex = 50;
             // 
@@ -155,38 +173,19 @@
             this.lbType.TabIndex = 47;
             this.lbType.Text = "Thể loại";
             // 
-            // pictureBox2
+            // btnMod
             // 
-            this.pictureBox2.Image = global::Library_Management.Properties.Resources.agenda;
-            this.pictureBox2.Location = new System.Drawing.Point(34, 150);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 54;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Library_Management.Properties.Resources.notebook;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(12, 269);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(776, 58);
-            this.btnAdd.TabIndex = 46;
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnMod.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMod.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
+            this.btnMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMod.FlatAppearance.BorderSize = 0;
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.Location = new System.Drawing.Point(12, 269);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(776, 58);
+            this.btnMod.TabIndex = 46;
+            this.btnMod.UseVisualStyleBackColor = false;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // frmModTitles
             // 
@@ -194,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 341);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnMod);
             this.Name = "frmModTitles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa đầu sách";
@@ -211,15 +210,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbAuth;
-        private System.Windows.Forms.ListBox lsbAuth;
+        public System.Windows.Forms.ListBox lsbAuth;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lsbType;
-        private System.Windows.Forms.TextBox tbTitlesName;
-        private System.Windows.Forms.TextBox tbTitlesCode;
+        public System.Windows.Forms.ListBox lsbType;
+        public System.Windows.Forms.TextBox tbTitlesName;
+        public System.Windows.Forms.TextBox tbTitlesCode;
         private System.Windows.Forms.Label lbType;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnMod;
     }
 }

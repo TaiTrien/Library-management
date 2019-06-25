@@ -31,6 +31,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAuth = new System.Windows.Forms.Label();
+            this.lsbAuth = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.tbTitlesName = new System.Windows.Forms.TextBox();
             this.tbTitlesCode = new System.Windows.Forms.TextBox();
             this.lbType = new System.Windows.Forms.Label();
-            this.lsbAuth = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +85,23 @@
             this.lbAuth.Size = new System.Drawing.Size(55, 17);
             this.lbAuth.TabIndex = 56;
             this.lbAuth.Text = "Tác giả";
+            // 
+            // lsbAuth
+            // 
+            this.lsbAuth.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbAuth.FormattingEnabled = true;
+            this.lsbAuth.ItemHeight = 16;
+            this.lsbAuth.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"});
+            this.lsbAuth.Location = new System.Drawing.Point(533, 30);
+            this.lsbAuth.Name = "lsbAuth";
+            this.lsbAuth.Size = new System.Drawing.Size(200, 52);
+            this.lsbAuth.TabIndex = 55;
             // 
             // pictureBox2
             // 
@@ -136,7 +153,6 @@
             "f"});
             this.lsbType.Location = new System.Drawing.Point(533, 150);
             this.lsbType.Name = "lsbType";
-            this.lsbType.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbType.Size = new System.Drawing.Size(200, 52);
             this.lsbType.TabIndex = 50;
             // 
@@ -174,24 +190,6 @@
             this.lbType.Size = new System.Drawing.Size(59, 17);
             this.lbType.TabIndex = 47;
             this.lbType.Text = "Thể loại";
-            // 
-            // lsbAuth
-            // 
-            this.lsbAuth.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbAuth.FormattingEnabled = true;
-            this.lsbAuth.ItemHeight = 16;
-            this.lsbAuth.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f"});
-            this.lsbAuth.Location = new System.Drawing.Point(533, 30);
-            this.lsbAuth.Name = "lsbAuth";
-            this.lsbAuth.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lsbAuth.Size = new System.Drawing.Size(200, 52);
-            this.lsbAuth.TabIndex = 55;
             // 
             // frmAddNewTitles
             // 
