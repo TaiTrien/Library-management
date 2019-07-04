@@ -4,3 +4,10 @@ E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.csprojAssemblyReference.
 E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.csproj.CoreCompileInputs.cache
 E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.exe
 E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.pdb
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\bin\Debug\QLTVDTO.exe.config
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\bin\Debug\QLTVDTO.exe
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\bin\Debug\QLTVDTO.pdb
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.csprojAssemblyReference.cache
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.csproj.CoreCompileInputs.cache
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.exe
+C:\Users\NguyenTrung\Desktop\Library-management\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.pdb

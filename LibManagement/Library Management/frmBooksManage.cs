@@ -76,6 +76,12 @@ namespace Library_Management
             clPricebook.HeaderText = "Giá";
             clPricebook.DataPropertyName = "TriGia";
             dgvBooksManage.Columns.Add(clPricebook);
+
+            DataGridViewTextBoxColumn clStatusbook = new DataGridViewTextBoxColumn();
+            clPricebook.Name = "Status";
+            clPricebook.HeaderText = "Đã Mượn";
+            clPricebook.DataPropertyName = "TinhTrang";
+            dgvBooksManage.Columns.Add(clStatusbook);
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

@@ -22,8 +22,8 @@ namespace QLTVDAL
         public bool add(bookDTO book)
         {
             string query = string.Empty;
-            query += "INSERT INTO SACH (MaSach, MaDauSach, NgayNhap, NXB, NamXuatBan, Gia) ";
-            query += "VALUES (@MaSach, @MaDauSach, @NgayNhap, @NXB, @NamXuatBan, @Gia)";
+            query += "INSERT INTO SACH (MaSach, MaDauSach, NgayNhap, NXB, NamXuatBan, Gia, DaMuon) ";
+            query += "VALUES (@MaSach, @MaDauSach, @NgayNhap, @NXB, @NamXuatBan, @Gia, @DaMuon)";
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 
@@ -38,6 +38,7 @@ namespace QLTVDAL
                     cmd.Parameters.AddWithValue("@NXB", book.NhaXuatBan);
                     cmd.Parameters.AddWithValue("@NamXuatBan", book.NamXuatBan);
                     cmd.Parameters.AddWithValue("@Gia", book.TriGia);
+                    cmd.Parameters.AddWithValue("@DaMuon", book.TinhTrang);
                     try
                     {
                         con.Open();
@@ -117,6 +118,7 @@ namespace QLTVDAL
                                 book.NhaXuatBan = reader["NXB"].ToString();
                                 book.NamXuatBan = reader.GetFieldValue<DateTime>(reader.GetOrdinal("NamXuatBan"));
                                 book.TriGia = Decimal.Parse(reader["Gia"].ToString());
+                                book.TinhTrang = reader["DaMuon"].ToString();
                                 lsBook.Add(book);
                             }
                         }

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="authDTO.cs" />
     <Compile Include="bookDTO.cs" />
+    <Compile Include="borrowbook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReaderDTO.cs" />
     <Compile Include="titlesDTO.cs" />

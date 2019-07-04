@@ -23,7 +23,7 @@ namespace QLTVDAL
 
         public ReaderDAL()
         {
-            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+          //  connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
 
         public bool add(ReaderDTO rd)

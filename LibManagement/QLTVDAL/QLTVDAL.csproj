@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="authDAL.cs" />
     <Compile Include="bookDAL.cs" />
+    <Compile Include="BorrowBookDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReaderDAL.cs" />
     <Compile Include="titlesDAL.cs" />

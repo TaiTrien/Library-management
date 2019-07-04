@@ -69,6 +69,8 @@ namespace Library_Management
             addBookDTO.NamXuatBan = dtpPublishYear.Value;
             addBookDTO.NhaXuatBan = tbPublisher.Text;
             addBookDTO.TriGia = nudValue.Value;
+            addBookDTO.TinhTrang = "0";
+
 
             //add into db
             bool result = addBookBUS.add(addBookDTO);
