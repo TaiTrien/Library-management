@@ -16,13 +16,22 @@ namespace Library_Management
             InitializeComponent();
             //Custom date time pick to display only month
             dtpMonth.Format = DateTimePickerFormat.Custom;
-            dtpMonth.CustomFormat = "mmmm";
+            dtpMonth.CustomFormat = "MM";
             dtpMonth.ShowUpDown = true;
            
             //Custom date time pick to display only year
             dtpYear.Format = DateTimePickerFormat.Custom;
             dtpYear.CustomFormat = "yyyy";
             dtpYear.ShowUpDown = true;
+        }
+
+        private void frmRPBorrowedBooks_Load(object sender, EventArgs e)
+        {
+            frmReportBorrwedBooks frmReport = new frmReportBorrwedBooks();
+            frmReport.TopLevel = false;
+            this.Controls.Add(frmReport);
+            this.pnReport.Hide();
+            frmReport.Show();
         }
     }
 }

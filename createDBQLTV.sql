@@ -23,6 +23,7 @@ CREATE TABLE SACH
 	NXB varchar(50),
 	NamXuatBan datetime,
 	Gia money,
+	DaMuon bit
 )
 
 CREATE TABLE TACGIA
@@ -102,14 +103,14 @@ CREATE TABLE MUONSACH
 
 CREATE TABLE THAMSO
 (
-	TuoiLonNhatDocGia int,
-	TuoiNhoNhatDocGia int,
+	TuoiToiDaDocGia int,
+	TuoiToiThieuDocGia int,
 	ThoiHanThe int,
 	SoTheLoaiToiDa int,
 	SoTacGiaToiDa int,
 	NamXuatBanToiDa int, /*Give data about maxium year of book can be received */
 	SoSachMuonToiDa int,
-	SoNgayMuonSachToiDa int,
+	SoNgayMuonToiDa int,
 )
 /*PK FOR TABLES*/
 
@@ -149,18 +150,30 @@ CREATE TABLE THAMSO
 	ALTER TABLE MUONSACH ADD
 		CONSTRAINT MUONSACH_MaSach_FK FOREIGN KEY (MaSach)
 			REFERENCES SACH (MaSach)
+
 	
-	alter table muonsach drop MUONSACH_MaSach_FK
-alter table sach drop SACH_MaDauSach_FK
-DROP TABLE SACH
-	insert DAUSACH (MaDauSach) values ('1')
-	insert into TACGIA(MaTacGia) values ('1')
-	insert into DAUSACH_TACGIA values ('1','1')
-	delete from DAUSACH_TACGIA WHERE (MaDauSach='1')
-	delete from DAUSACH where (MaDauSach='1')
-	select MaDauSach,TenDauSach from DAUSACH
-	select * from TACGIA where MaTacGia='23'
-	update TACGIA set MaTacGia='4'
-	delete from DAUSACH where MaDauSach='124124'
-	delete from DAUSACH_TACGIA from DAUSACH INNER JOIN DAUSACH_TACGIA ON DAUSACH.MaDauSach = DAUSACH_TACGIA.MaDauSach
-	Where  DAUSACH_TACGIA.MaDauSach ='1'
+
+SELECT DAUSACH.TenDauSach, MUONSACH.NgayMuon, DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) AS SONGAYTRATRE
+FROM MUONSACH INNER JOIN
+                  THEDOCGIA ON MUONSACH.MaThe = THEDOCGIA.MaThe INNER JOIN
+                  NGUOIDUNG ON NGUOIDUNG.MaNguoiDung = MUONSACH.MaNguoiDung INNER JOIN
+                  SACH ON SACH.MaSach = MUONSACH.MaSach INNER JOIN
+                  DAUSACH ON DAUSACH.MaDauSach = SACH.MaDauSach
+WHERE  (DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) > 0)
+
+
+
+
+
+
+SELECT THELOAISACH.TenTheLoai, COUNT (MUONSACH.MaSach) AS SOLUONGMUON
+FROM     DAUSACH ,
+                  DAUSACH_THELOAI,
+                  THELOAISACH ,
+                  SACH , MUONSACH
+WHERE DAUSACH.MaDauSach = DAUSACH_THELOAI.MaTheLoai 
+		AND THELOAISACH.MaTheLoai = DAUSACH_THELOAI.MaTheLoai
+			AND SACH.MaSach = MUONSACH.MaSach
+				AND DAUSACH.MaDauSach = SACH.MaDauSach
+GROUP BY  THELOAISACH.TenTheLoai
+

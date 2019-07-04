@@ -26,7 +26,7 @@ namespace Library_Management
         private void btnLateReturn_Click(object sender, EventArgs e)
         {
             //To create form to report about late return 
-            frmLateReturn frmLateReturn = new frmLateReturn();
+            frmRPLateReturn frmLateReturn = new frmRPLateReturn();
             frmLateReturn.ShowDialog();
         }
     }
