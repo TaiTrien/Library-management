@@ -100,10 +100,19 @@ CREATE TABLE MUONSACH
 	PRIMARY KEY (MaThe, MaNguoiDung, MaSach, MaMuonSach)
 )
 
+CREATE TABLE THAMSO
+(
+	TuoiLonNhatDocGia int,
+	TuoiNhoNhatDocGia int,
+	ThoiHanThe int,
+	SoTheLoaiToiDa int,
+	SoTacGiaToiDa int,
+	NamXuatBanToiDa int, /*Give data about maxium year of book can be received */
+	SoSachMuonToiDa int,
+	SoNgayMuonSachToiDa int,
+)
 /*PK FOR TABLES*/
-alter table muonsach drop MUONSACH_MaSach_FK
-alter table sach drop SACH_MaDauSach_FK
-DROP TABLE SACH
+
 
 	ALTER TABLE SACH ADD
 		CONSTRAINT SACH_MaDauSach_FK FOREIGN KEY (MaDauSach)
@@ -141,6 +150,9 @@ DROP TABLE SACH
 		CONSTRAINT MUONSACH_MaSach_FK FOREIGN KEY (MaSach)
 			REFERENCES SACH (MaSach)
 	
+	alter table muonsach drop MUONSACH_MaSach_FK
+alter table sach drop SACH_MaDauSach_FK
+DROP TABLE SACH
 	insert DAUSACH (MaDauSach) values ('1')
 	insert into TACGIA(MaTacGia) values ('1')
 	insert into DAUSACH_TACGIA values ('1','1')

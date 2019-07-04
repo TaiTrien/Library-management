@@ -239,5 +239,49 @@ namespace QLTVDAL
             }
             return auth.MaTacGia;
         }
+        // count auth frm DB
+        public int getPresentNumberofAuth()
+        {
+            int temp = 0;
+            string query = string.Empty;
+            query += "SELECT COUNT(MaTacGia) as NumberAuth";
+            query += " FROM TACGIA";
+
+            List<typeDTO> lsTypes = new List<typeDTO>();
+
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                temp = int.Parse(reader["NumberAuth"].ToString());
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return temp;
+        }
     }
 }

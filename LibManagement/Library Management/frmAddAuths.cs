@@ -56,8 +56,16 @@ namespace Library_Management
         //To end placeholders
         public void btnAdd_Click(object sender, EventArgs e)
         {
-           bool result;
-          
+            bool result;
+            int maxAuth = authBUS.getMaxNumberofAuth();
+            int temp = authBUS.getNumberofAuth(); // to get present number of author
+
+            if (temp >= maxAuth)
+            {
+                MessageBox.Show("Số tác giả đã hơn số qui định");
+            }
+            else
+            {
                 //map data from gui
                 authDTO.MaTacGia = tbAuthCode.Text;
                 authDTO.TenTacGia = tbName.Text;
@@ -69,6 +77,7 @@ namespace Library_Management
                     MessageBox.Show("Thêm thất bại.");
                 else
                     MessageBox.Show("Thêm thành công.");
+            }
          
         }
        

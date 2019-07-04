@@ -98,6 +98,7 @@
             this.btnSearch.Size = new System.Drawing.Size(49, 46);
             this.btnSearch.TabIndex = 25;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lbGoogle
             // 
