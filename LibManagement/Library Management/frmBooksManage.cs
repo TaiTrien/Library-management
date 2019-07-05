@@ -89,6 +89,7 @@ namespace Library_Management
             // create a form to add a new book
             frmAddNewBooks frmAddNewBooks = new frmAddNewBooks();
             frmAddNewBooks.ShowDialog();
+            LoadDataInto_DataGridViewOfBook();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -96,6 +97,7 @@ namespace Library_Management
             // to create form to search books
             frmSearchBooks frmSearchBooks = new frmSearchBooks();
             frmSearchBooks.ShowDialog();
+        
         }
 
         //to create form to borrow books
@@ -103,12 +105,14 @@ namespace Library_Management
         {
             frmBorrowBooks frmBorrowBooks = new frmBorrowBooks();
             frmBorrowBooks.ShowDialog();
+            LoadDataInto_DataGridViewOfBook();
         }
         // to create a form to return books
         private void btnReturn_Click(object sender, EventArgs e)
         {
             frmReturnBooks frmReturnBooks = new frmReturnBooks();
             frmReturnBooks.ShowDialog();
+            LoadDataInto_DataGridViewOfBook();
         }
 
         private void btnDel_Click(object sender, EventArgs e)

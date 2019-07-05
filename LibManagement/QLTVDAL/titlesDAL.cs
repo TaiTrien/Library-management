@@ -101,11 +101,7 @@ namespace QLTVDAL
         // to delete titles from DAUSACH table and referencing table
         public bool del(titlesDTO titles)
         {
-          //  List <bookDTO> book = new List<bookDTO>();
-           // bookDAL bookDAL = new bookDAL();
-            //book = bookDAL.selectedBook();
-           // var tempBook = book.Select<book => x.MaDauSach = titles.MaDauSach >
-            //delete titles from DauSach table
+         
             string queryDelTitles = string.Empty;
             queryDelTitles += "DELETE FROM DAUSACH ";
             queryDelTitles += "WHERE MaDauSach = @mds";
@@ -121,33 +117,7 @@ namespace QLTVDAL
             string queryDelBook = string.Empty;
             queryDelBook += "DELETE FROM SACH ";
             queryDelBook += "WHERE  MaDauSach = @mds ";
-            // delete book from MUONSACH table
-            string queryDelBookFromMS = string.Empty;
-            queryDelBookFromMS += "DELETE FROM MUONSACH ";
-            queryDelBookFromMS += "WHERE  MaSach = @ms ";
-            // to delete book from table MUONSACH
-            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
-            {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = con;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = queryDelBookFromMS;
-                    //cmd.Parameters.AddWithValue("@ms", titles.Ma);
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        con.Close();
-                        con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return false;
-                    }
-                }
-            }
+          
             // to delete titles from table SACH
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
             {
