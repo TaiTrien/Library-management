@@ -68,7 +68,7 @@ namespace Library_Management
             int k = myPicker.Value.Year - dtpPublishYear.Value.Year;
             if (k > addBookBUS.getMaxOfYearExp())
             {
-                MessageBox.Show("Năm Xuất Bản không phù hợp");
+                MessageBox.Show("Năm xuất bản không phù hợp");
 
             }
             else

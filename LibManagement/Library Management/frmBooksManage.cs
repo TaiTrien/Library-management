@@ -15,19 +15,21 @@ namespace Library_Management
     {
         private QLTVBUS.bookBUS bookBUS = new bookBUS();
         private bookDTO bookDTO;
+        private titlesBUS titlesBUS;
         public frmBooksManage()
         {
             InitializeComponent();
         }
         private void frmBooksManage_Load_1(object sender, EventArgs e)
         {
+            titlesBUS = new titlesBUS();
             bookBUS = new QLTVBUS.bookBUS();
             LoadDataInto_DataGridViewOfBook();
         }
 
         private void LoadDataInto_DataGridViewOfBook()
         {
-
+            
             List<bookDTO> listBook = bookBUS.selectedBook();
             if (listBook == null)
             {
@@ -78,11 +80,35 @@ namespace Library_Management
             clPricebook.DataPropertyName = "TriGia";
             dgvBooksManage.Columns.Add(clPricebook);
 
+            
+
             DataGridViewTextBoxColumn clStatusbook = new DataGridViewTextBoxColumn();
-            clPricebook.Name = "Status";
-            clPricebook.HeaderText = "Đã Mượn";
-            clPricebook.DataPropertyName = "TinhTrang";
+            clStatusbook.Name = "Status";
+            clStatusbook.HeaderText = "Đã Mượn";
+            clStatusbook.DataPropertyName = "TinhTrang";
             dgvBooksManage.Columns.Add(clStatusbook);
+        }
+
+        private void LoadTitlesInto_ComboBox(frmModBook frmModBook)
+        {
+            titlesBUS = new titlesBUS();
+            List<titlesDTO> listTitles = titlesBUS.selectedTitleall();
+            if (frmModBook.cbTitleName == null)
+            {
+                MessageBox.Show("DB chưa có thông tin của bất cứ đầu sách nào");
+                return;
+            }
+            frmModBook.cbTitleName.DataSource = new BindingSource(listTitles, String.Empty);
+            frmModBook.cbTitleName.DisplayMember = "TenDauSach";
+            frmModBook.cbTitleName.ValueMember = "MaDauSach";
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[frmModBook.cbTitleName.DataSource];
+            myCurrencyManager.Refresh();
+
+            if (frmModBook.cbTitleName.Items.Count > 0)
+            {
+                frmModBook.cbTitleName.SelectedIndex = 0;
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -134,7 +160,35 @@ namespace Library_Management
 
         private void btnMod_Click(object sender, EventArgs e)
         {
+            DialogResult warning = new DialogResult();
+            warning = MessageBox.Show("Bạn có chắc chắn muốn sửa tác giả này?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            if (warning == DialogResult.Yes)
+            {
+                int rowIndex = dgvBooksManage.CurrentCell.RowIndex;
 
+                bookDTO = new bookDTO();
+                bookDTO.MaSach = dgvBooksManage.Rows[rowIndex].Cells[0].Value.ToString();
+                bookDTO.MaDauSach = dgvBooksManage.Rows[rowIndex].Cells[1].Value.ToString();
+                bookDTO.NgayNhap = Convert.ToDateTime(dgvBooksManage.Rows[rowIndex].Cells[2].Value);
+                bookDTO.NhaXuatBan = dgvBooksManage.Rows[rowIndex].Cells[3].Value.ToString();
+                bookDTO.NamXuatBan = Convert.ToDateTime(dgvBooksManage.Rows[rowIndex].Cells[4].Value);
+               // bookDTO.TriGia = Decimal.Parse(bookDTO.NhaXuatBan = dgvBooksManage.Rows[rowIndex].Cells[5].Value.ToString());
+                bookDTO.TinhTrang = dgvBooksManage.Rows[rowIndex].Cells[6].Value.ToString();
+
+                // to display form to modify author
+                frmModBook frmModBook = new frmModBook();
+                LoadTitlesInto_ComboBox(frmModBook);
+                frmModBook.tbBookCode.ReadOnly = true;
+                frmModBook.tbBookCode.Text=bookDTO.MaSach;
+                frmModBook.cbTitleName.SelectedValue = bookDTO.MaDauSach;
+                frmModBook.dtpDateIn.Value = bookDTO.NgayNhap;
+                frmModBook.dtpPublishYear.Value = bookDTO.NamXuatBan;
+                frmModBook.tbPublisher.Text = bookDTO.NhaXuatBan ;
+                frmModBook.nudValue.Value = bookDTO.TriGia ;
+                frmModBook.ShowDialog();
+            }
+            else return;
+            LoadDataInto_DataGridViewOfBook();
         }
     }
 }

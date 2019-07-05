@@ -142,6 +142,12 @@
     <Compile Include="frmAuthsManage.Designer.cs">
       <DependentUpon>frmAuthsManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModBook.Designer.cs">
+      <DependentUpon>frmModBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRPLateReturn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAuthsManage.resx">
       <DependentUpon>frmAuthsManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModBook.resx">
+      <DependentUpon>frmModBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRPLateReturn.resx">
       <DependentUpon>frmRPLateReturn.cs</DependentUpon>

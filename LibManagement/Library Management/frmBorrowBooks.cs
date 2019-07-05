@@ -93,7 +93,7 @@ namespace Library_Management
         }
         private void tbIdBorrowBook_Enter(object sender, EventArgs e)
         {
-            if (tbBookCode.Text == "Mã Mượn")
+            if (tbBookCode.Text == "Mã mượn")
             {
                 tbBookCode.Text = "";
                 tbBookCode.ForeColor = Color.Black;
@@ -103,7 +103,7 @@ namespace Library_Management
         {
             if (tbBookCode.Text == "")
             {
-                tbBookCode.Text = "Mã Mượn";
+                tbBookCode.Text = "Mã mượn";
                 tbBookCode.ForeColor = Color.Gray;
             }
         }

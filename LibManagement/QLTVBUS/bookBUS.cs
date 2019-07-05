@@ -30,6 +30,11 @@ namespace QLTVBUS
             bool re = bookDAL.del(bookDTO);
             return re;
         }
+        public bool mod(bookDTO bookDTO)
+        {
+            bool re = bookDAL.mod(bookDTO);
+            return re;
+        }
         public List<bookDTO> selectedBook()
         {
             return bookDAL.selectedBook();

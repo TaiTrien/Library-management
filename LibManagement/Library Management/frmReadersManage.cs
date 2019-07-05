@@ -32,7 +32,7 @@ namespace Library_Management
         private void btnDel_Click(object sender, EventArgs e)
         {
             DialogResult warning = new DialogResult();
-            warning = MessageBox.Show("Bạn có chắc chắn muốn xóa sách này?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            warning = MessageBox.Show("Bạn có chắc chắn muốn xóa độc giả này?", "Cảnh báo!", MessageBoxButtons.YesNo);
             if (warning == DialogResult.Yes)
             {
                 int rowIndex = dgvDocGia.CurrentCell.RowIndex;
@@ -55,7 +55,7 @@ namespace Library_Management
         private void btnMod_Click(object sender, EventArgs e)
         {
             DialogResult warning = new DialogResult();
-            warning = MessageBox.Show("Bạn có chắc chắn muốn sửa sách này?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            warning = MessageBox.Show("Bạn có chắc chắn muốn sửa độc giả này?", "Cảnh báo!", MessageBoxButtons.YesNo);
             if (warning == DialogResult.Yes)
             {
                 int rowIndex = dgvDocGia.CurrentCell.RowIndex;
@@ -91,7 +91,7 @@ namespace Library_Management
             List<ReaderDTO> listReader = dgBus.select();
             if (listReader == null)
             {
-                MessageBox.Show("Chưa có thông tin sách");
+                MessageBox.Show("Chưa có thông tin độc giả");
             }
 
 
