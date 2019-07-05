@@ -829,7 +829,6 @@ namespace Library_Management.DataSet1TableAdapters {
             this._commandCollection[0].CommandText = @"SELECT DAUSACH.TenDauSach, MUONSACH.NgayMuon, DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) AS SONGAYTRATRE
 FROM     MUONSACH INNER JOIN
                   THEDOCGIA ON MUONSACH.MaThe = THEDOCGIA.MaThe INNER JOIN
-                  NGUOIDUNG ON NGUOIDUNG.MaNguoiDung = MUONSACH.MaNguoiDung INNER JOIN
                   SACH ON SACH.MaSach = MUONSACH.MaSach INNER JOIN
                   DAUSACH ON DAUSACH.MaDauSach = SACH.MaDauSach
 WHERE  (DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) > 0) AND (MONTH(MUONSACH.NgayMuon) = @ThangMuon) AND (YEAR(MUONSACH.NgayMuon) = @NamMuon)";

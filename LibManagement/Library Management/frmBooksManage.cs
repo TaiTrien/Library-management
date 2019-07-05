@@ -161,7 +161,7 @@ namespace Library_Management
         private void btnMod_Click(object sender, EventArgs e)
         {
             DialogResult warning = new DialogResult();
-            warning = MessageBox.Show("Bạn có chắc chắn muốn sửa tác giả này?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            warning = MessageBox.Show("Bạn có chắc chắn muốn sửa sách này?", "Cảnh báo!", MessageBoxButtons.YesNo);
             if (warning == DialogResult.Yes)
             {
                 int rowIndex = dgvBooksManage.CurrentCell.RowIndex;
@@ -172,7 +172,7 @@ namespace Library_Management
                 bookDTO.NgayNhap = Convert.ToDateTime(dgvBooksManage.Rows[rowIndex].Cells[2].Value);
                 bookDTO.NhaXuatBan = dgvBooksManage.Rows[rowIndex].Cells[3].Value.ToString();
                 bookDTO.NamXuatBan = Convert.ToDateTime(dgvBooksManage.Rows[rowIndex].Cells[4].Value);
-               // bookDTO.TriGia = Decimal.Parse(bookDTO.NhaXuatBan = dgvBooksManage.Rows[rowIndex].Cells[5].Value.ToString());
+                bookDTO.TriGia = Decimal.Parse(dgvBooksManage.Rows[rowIndex].Cells[5].Value.ToString());
                 bookDTO.TinhTrang = dgvBooksManage.Rows[rowIndex].Cells[6].Value.ToString();
 
                 // to display form to modify author

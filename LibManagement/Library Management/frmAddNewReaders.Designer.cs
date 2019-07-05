@@ -138,7 +138,6 @@
             this.dtpDob.TabIndex = 4;
             this.dtpDob.Value = new System.DateTime(2019, 6, 6, 0, 0, 0, 0);
             this.dtpDob.ValueChanged += new System.EventHandler(this.dtpDob_ValueChanged);
-
             // 
             // label1
             // 
@@ -238,11 +237,12 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(591, 128);
+            this.btnEdit.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEdit.Location = new System.Drawing.Point(528, 236);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(133, 84);
+            this.btnEdit.Size = new System.Drawing.Size(247, 175);
             this.btnEdit.TabIndex = 47;
-            this.btnEdit.Text = "button1";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Visible = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);

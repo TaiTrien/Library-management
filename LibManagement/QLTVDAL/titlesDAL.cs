@@ -388,7 +388,7 @@ namespace QLTVDAL
                         reader = cmd.ExecuteReader();
                         if (reader.HasRows == true)
                         {
-                            int temp = 0;
+                            
                             while (reader.Read())
                             {
                                 titlesDTO titles = new titlesDTO();

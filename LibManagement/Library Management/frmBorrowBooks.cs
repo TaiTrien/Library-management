@@ -20,6 +20,22 @@ namespace Library_Management
             InitializeComponent();
         }
         // To create placeholders
+        private void tbIdBorrowBook_Enter(object sender, EventArgs e)
+        {
+            if (tbIdBorrowBook.Text == "Mã phiếu mượn")
+            {
+                tbIdBorrowBook.Text = "";
+                tbIdBorrowBook.ForeColor = Color.Black;
+            }
+        }
+        private void tbIdBorrowBook_Leave(object sender, EventArgs e)
+        {
+            if (tbIdBorrowBook.Text == "")
+            {
+                tbIdBorrowBook.Text = "Mã phiếu mượn";
+                tbIdBorrowBook.ForeColor = Color.Gray;
+            }
+        }
         private void tbReaderCode_Enter(object sender, EventArgs e)
         {
             if (tbReaderCode.Text == "Mã độc giả")
@@ -65,22 +81,23 @@ namespace Library_Management
             ReaderDTO reader = new ReaderDTO();
             DateTimePicker myPicker = new DateTimePicker();
             myPicker.Value = DateTime.Now;
-            reader.IdReader = int.Parse(tbReaderCode.Text);
             int k = myPicker.Value.Month - reader.DateCreateReader.Month ;
             int SoSachMuon = ReaderBUS.SoSachMuon(reader);
             int SoSachMax = ReaderBUS.getMaxofBorrowBook();
+            reader.IdReader = int.Parse(tbReaderCode.Text);
+            string temp = tbReaderCode.Text;
             if ( (k > ReaderBUS.getTimeofReader()) && (SoSachMuon > SoSachMax))
             {
                 MessageBox.Show("Đã Hết hạn mượn Thẻ ");
             }
             else
             {
+                
                 book.MaSach = tbBookCode.Text;
                 borrowDTO.NgayMuonSach = DateBorrowdtp.Value;
                 borrowDTO.Idborrowbook = tbIdBorrowBook.Text;
-                
                 borrowDTO.NgayTraSach = DateBorrowdtp.Value.AddDays(borrowBUS.SoNgayMuonToiDa());
-
+                
                 //add into db
                 bool result = borrowBUS.add(borrowDTO, book, reader);
                 if (result == true)
@@ -91,22 +108,7 @@ namespace Library_Management
 
 
         }
-        private void tbIdBorrowBook_Enter(object sender, EventArgs e)
-        {
-            if (tbBookCode.Text == "Mã mượn")
-            {
-                tbBookCode.Text = "";
-                tbBookCode.ForeColor = Color.Black;
-            }
-        }
-        private void tbIdBorrowBook_Leave(object sender, EventArgs e)
-        {
-            if (tbBookCode.Text == "")
-            {
-                tbBookCode.Text = "Mã mượn";
-                tbBookCode.ForeColor = Color.Gray;
-            }
-        }
+      
         //end placeholders
     }
 }

@@ -19,6 +19,22 @@ namespace Library_Management
             InitializeComponent();
         }
         // To create placeholders
+        private void tbReturnBook_Enter(object sender, EventArgs e)
+        {
+            if (tbReturnBook.Text == "Mã phiếu trả")
+            {
+                tbReturnBook.Text = "";
+                tbReturnBook.ForeColor = Color.Black;
+            }
+        }
+        private void tbReturnBook_Leave(object sender, EventArgs e)
+        {
+            if (tbReturnBook.Text == "")
+            {
+                tbReturnBook.Text = "Mã phiếu trả";
+                tbReturnBook.ForeColor = Color.Gray;
+            }
+        }
         private void tbReaderCode_Enter(object sender, EventArgs e)
         {
             if (tbReaderCode.Text == "Mã độc giả")
@@ -45,10 +61,10 @@ namespace Library_Management
         }
         private void tbBookCode_Leave(object sender, EventArgs e)
         {
-            if (tbReaderCode.Text == "")
+            if (tbBookCode.Text == "")
             {
-                tbReaderCode.Text = "Mã sách cần trả";
-                tbReaderCode.ForeColor = Color.Gray;
+                tbBookCode.Text = "Mã sách cần trả";
+                tbBookCode.ForeColor = Color.Gray;
             }
         }
 
@@ -57,9 +73,9 @@ namespace Library_Management
             QLTVDTO.borrowbook borrowDTO = new QLTVDTO.borrowbook();
             bookDTO book = new bookDTO();
             ReaderDTO reader = new ReaderDTO();
-
             book.MaSach = tbBookCode.Text;
             reader.IdReader = int.Parse(tbReaderCode.Text);
+            string temp1 = tbReaderCode.Text;
             borrowDTO.NgayTraSachThuc = dtpReturnBookDate.Value;
             borrowDTO.Idborrowbook = tbReturnBook.Text;
 

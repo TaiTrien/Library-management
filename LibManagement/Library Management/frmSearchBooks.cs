@@ -35,8 +35,7 @@ namespace Library_Management
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string userInput = tbSearchBar.Text;
-            string strGetFromDB;
+           
         }
         // end place holder
     }

@@ -786,9 +786,9 @@ namespace Library_Management.DataSetBorrowedBookTableAdapters {
             this._commandCollection[0].CommandText = @"SELECT THELOAISACH.TenTheLoai, COUNT(MUONSACH.MaSach) AS SOLUONGMUON
 FROM     MUONSACH INNER JOIN
                   SACH ON MUONSACH.MaSach = SACH.MaSach INNER JOIN
-                  DAUSACH INNER JOIN
-                  DAUSACH_THELOAI ON DAUSACH.MaDauSach = DAUSACH_THELOAI.MaTheLoai INNER JOIN
-                  THELOAISACH ON DAUSACH_THELOAI.MaTheLoai = THELOAISACH.MaTheLoai ON SACH.MaDauSach = DAUSACH.MaDauSach
+                  DAUSACH ON SACH.MaDauSach = DAUSACH.MaDauSach INNER JOIN
+                  DAUSACH_THELOAI ON DAUSACH.MaDauSach = DAUSACH_THELOAI.MaDauSach INNER JOIN
+                  THELOAISACH ON DAUSACH_THELOAI.MaTheLoai = THELOAISACH.MaTheLoai
 WHERE  (MONTH(MUONSACH.NgayMuon) = @ThangMuon) AND (YEAR(MUONSACH.NgayMuon) = @NamMuon)
 GROUP BY THELOAISACH.TenTheLoai";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;

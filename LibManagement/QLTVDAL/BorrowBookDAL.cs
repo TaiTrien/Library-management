@@ -15,39 +15,39 @@ namespace QLTVDAL
         public bool Add(borrowbook SachMuon, bookDTO book, ReaderDTO reader)
         {
             string query = string.Empty;
-            query += "INSERT INTO MUONSACH (MaThe, MaSach, MaMuonSach, NgayMuon, MaNguoiDung, NgayTra ) ";
-            query += "VALUES (@MaThe, @MaSach, @MaMuonSach, @NgayMuon,@MaNguoiDung,@NgayTra )";
+            query += "INSERT INTO MUONSACH (MaThe, MaSach, MaMuonSach, NgayMuon, MaNguoiDung, NgayTra) ";
+            query += "VALUES (@MaThe, @MaSach, @MaMuonSach, @NgayMuon, @MaNguoiDung, @NgayTra)";
       
             string query2 = string.Empty;
-            query2 += "IF NOT EXISTS(SELECT TOP 1 MaThe FROM THEDOCGIA WHERE MaThe= @MaThe)" + Environment.NewLine;
-            query2 += "INSERT INTO MUONSACH (MaThe, MaSach, NgayMuon)" + Environment.NewLine;
-            query2 += "VALUES (@MaThe, @MaSach, @NgayMuon)";
-            query2 += "else" + Environment.NewLine;
-            query2 += "begin" + Environment.NewLine;
+            query2 += "IF NOT EXISTS(SELECT TOP 1 MaThe FROM THEDOCGIA WHERE MaThe= @MaThe) " + Environment.NewLine;
+            query2 += "INSERT INTO MUONSACH (MaThe, MaSach, NgayMuon) " + Environment.NewLine;
+            query2 += "VALUES (@MaThe, @MaSach, @NgayMuon) ";
+            query2 += "else " + Environment.NewLine;
+            query2 += "begin " + Environment.NewLine;
             query2 += "DECLARE @dk INT " + Environment.NewLine;      
-            query2 += "DECLARE cursorProduct CURSOR FOR" + Environment.NewLine;
-            query2 += "select DaMuon from SACH where MaSach = @MaSach" + Environment.NewLine;
-            query2 += "Open cursorProduct FETCH NEXT FROM cursorProduct INTO @dk" + Environment.NewLine;
+            query2 += "DECLARE cursorProduct CURSOR FOR " + Environment.NewLine;
+            query2 += "select DaMuon from SACH where MaSach = @MaSach " + Environment.NewLine;
+            query2 += "Open cursorProduct FETCH NEXT FROM cursorProduct INTO @dk " + Environment.NewLine;
             query2 += "if @dk = 0 " + Environment.NewLine;
-            query2 += "update SACH set DaMuon = 1 where MaSach = @MaSach" + Environment.NewLine;
+            query2 += "update SACH set DaMuon = 1 where MaSach = @MaSach " + Environment.NewLine;
             query2 += "else" + Environment.NewLine;
-            query2 += "INSERT INTO MUONSACH (MaThe, MaSach, NgayMuon)" + Environment.NewLine;
-            query2 += "VALUES (@MaThe, @MaSach, @NgayMuon)";
-            query2 += "end" + Environment.NewLine;
+            query2 += "INSERT INTO MUONSACH (MaThe, MaSach, NgayMuon) " + Environment.NewLine;
+            query2 += "VALUES (@MaThe, @MaSach, @NgayMuon) ";
+            query2 += "end " + Environment.NewLine;
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
-
+                string temp = "1";
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@MaThe", reader.IdReader);
+                    cmd.Parameters.AddWithValue("@MaThe",reader.IdReader);
                     cmd.Parameters.AddWithValue("@MaSach", book.MaSach);
-                    Random rd = new Random();
-                    cmd.Parameters.AddWithValue("@MaMuonSach",SachMuon.Idborrowbook);
+                 
+                    cmd.Parameters.AddWithValue("@MaMuonSach", SachMuon.Idborrowbook);
                     cmd.Parameters.AddWithValue("@NgayMuon", SachMuon.NgayMuonSach);
-                    cmd.Parameters.AddWithValue("@MaNguoiDung", 1);
+                    cmd.Parameters.AddWithValue("@MaNguoiDung", temp.ToString());
                     cmd.Parameters.AddWithValue("@NgayTra", SachMuon.NgayTraSach);
 
                     try
@@ -59,7 +59,9 @@ namespace QLTVDAL
                     }
                     catch (Exception ex)
                     {
+                        Console.WriteLine(ex);
                         con.Close();
+                        
                         return false;
                     }
                 }
@@ -99,27 +101,27 @@ namespace QLTVDAL
 
 
             string query2 = string.Empty;
-            query2 += "IF NOT EXISTS(SELECT TOP 1 MaThe FROM THEDOCGIA WHERE MaThe= @MaThe)" + Environment.NewLine;
-            query2 += "INSERT INTO MUONSACH (MaThe, MaSach)" + Environment.NewLine;
-            query2 += "VALUES (@MaThe, @MaSach)";
-            query2 += "else" + Environment.NewLine;
-            query2 += "begin" + Environment.NewLine;
+            query2 += "IF NOT EXISTS(SELECT TOP 1 MaThe FROM THEDOCGIA WHERE MaThe= @MaThe) " + Environment.NewLine;
+            query2 += "INSERT INTO MUONSACH (MaThe, MaSach) " + Environment.NewLine;
+            query2 += "VALUES (@MaThe, @MaSach) ";
+            query2 += "else " + Environment.NewLine;
+            query2 += "begin " + Environment.NewLine;
             query2 += "DECLARE @dk INT " + Environment.NewLine;
-            query2 += "DECLARE cursorProduct CURSOR FOR" + Environment.NewLine;
+            query2 += "DECLARE cursorProduct CURSOR FOR " + Environment.NewLine;
             query2 += "select DaMuon from SACH where MaSach = @MaSach " + Environment.NewLine;
-            query2 += "Open cursorProduct FETCH NEXT FROM cursorProduct INTO @dk" + Environment.NewLine;
+            query2 += "Open cursorProduct FETCH NEXT FROM cursorProduct INTO @dk " + Environment.NewLine;
             query2 += "if @dk = 1 " + Environment.NewLine;
             query2 += "begin" + Environment.NewLine;
-            query2 += "update SACH set DaMuon = 0 where MaSach = @MaSach" + Environment.NewLine;
+            query2 += "update SACH set DaMuon = 0 where MaSach = @MaSach " + Environment.NewLine;
      
             query2 += "UPDATE MUONSACH SET ";
             query2 += "NgayTraThucTe = @NgayTraThucTe ";
-            query2 += "WHERE MaThe=@MaThe and MaSach = @MaSach" + Environment.NewLine;
-            query2 += "end" + Environment.NewLine;
-            query2 += "else" + Environment.NewLine;
-            query2 += "INSERT INTO MUONSACH (MaThe, MaSach, NgayTraThucTe,MaMuonSach)" + Environment.NewLine;
-            query2 += "VALUES (@MaThe, @MaSach, @NgayTraThucTe,@MaMuonSach)";
-            query2 += "end" + Environment.NewLine;
+            query2 += "WHERE MaThe=@MaThe and MaSach = @MaSach " + Environment.NewLine;
+            query2 += "end " + Environment.NewLine;
+            query2 += "else " + Environment.NewLine;
+            query2 += "INSERT INTO MUONSACH (MaThe, MaSach, NgayTraThucTe,MaMuonSach) " + Environment.NewLine;
+            query2 += "VALUES (@MaThe, @MaSach, @NgayTraThucTe,@MaMuonSach) ";
+            query2 += "end " + Environment.NewLine;
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 

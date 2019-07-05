@@ -179,8 +179,8 @@ namespace QLTVDAL
         public List<ReaderDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [MaThe], [HoTen], [NgaySinh], [DiaChi], [Email], [NgayLapThe], [LoaiDocGia]";
-            query += "FROM [THEDOCGIA]";
+            query += "SELECT * ";
+            query += "FROM THEDOCGIA";
 
             List<ReaderDTO> lsreader = new List<ReaderDTO>();
 

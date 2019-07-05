@@ -146,7 +146,7 @@
             // 
             // txNumberTitles
             // 
-            this.txNumberTitles.Location = new System.Drawing.Point(339, 54);
+            this.txNumberTitles.Location = new System.Drawing.Point(388, 54);
             this.txNumberTitles.Name = "txNumberTitles";
             this.txNumberTitles.Size = new System.Drawing.Size(128, 34);
             this.txNumberTitles.TabIndex = 1;
@@ -155,7 +155,7 @@
             // 
             // tbYearPubish
             // 
-            this.tbYearPubish.Location = new System.Drawing.Point(339, 106);
+            this.tbYearPubish.Location = new System.Drawing.Point(388, 106);
             this.tbYearPubish.Name = "tbYearPubish";
             this.tbYearPubish.Size = new System.Drawing.Size(128, 34);
             this.tbYearPubish.TabIndex = 1;
@@ -221,7 +221,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(552, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(516, 220);
+            this.groupBox2.Size = new System.Drawing.Size(548, 220);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SÁCH";
@@ -230,7 +230,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 440);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1158, 440);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUpdate);
