@@ -10,6 +10,7 @@ namespace QLTVBUS
 {
     public class ReaderBUS
     {
+        private parametersDAL paraDAL;
         private  ReaderDAL dgDal;
         public ReaderBUS()
         {
@@ -34,5 +35,23 @@ namespace QLTVBUS
         {
             return dgDal.select();
         }
+        public int getMaxAgeofReader() // 
+        {
+            int res;
+            paraDAL = new parametersDAL();
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            res = para.TuoiToiDaDocGia;
+            return res;
+        }
+        public int getMinAgeofReader() // 
+        {
+            int res;
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            res = para.TuoiToiThieuDocGia;
+            return res;
+        }
+
     }
 }

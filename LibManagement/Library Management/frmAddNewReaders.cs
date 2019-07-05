@@ -15,17 +15,18 @@ namespace Library_Management
     {
 
         private QLTVBUS.ReaderBUS dgbus;
+
         private int idreaderedit;
         public frmAddNewReaders()
         {
             InitializeComponent();
             dgbus = new QLTVBUS.ReaderBUS();
-            
+
         }
         private void FrmAddNewReaders_Load(object sender, EventArgs e)
         {
-            
-         
+
+
         }
         // To set placeholders for textboxs
         private void tbName_Enter(object sender, EventArgs e)
@@ -95,20 +96,33 @@ namespace Library_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Random rd = new Random();          
+            Random rd = new Random();
             ReaderDTO dg = new ReaderDTO();
+
             dg.IdReader = rd.Next(1, 100);
             dg.NameReader = tbName.Text;
             dg.DateOfBirth = dtpDob.Value.Date;
-            dg.AddressReader = tbAddress.Text;
-            dg.Email = tbEmail.Text;
-            dg.TypeOfReader = cbTypeofReaders.GetItemText(cbTypeofReaders.SelectedItem);
-            dg.DateCreateReader = dtpDateCreateCard.Value.Date;
-            bool kq = dgbus.add(dg);
-            if (kq == false)
-                MessageBox.Show("Thêm thất bại. Vui lòng kiểm tra lại dũ liệu");
+
+            DateTimePicker myPicker = new DateTimePicker();
+            myPicker.Value = DateTime.Now;
+            int k = myPicker.Value.Year - dtpDob.Value.Year;
+            if ((k > dgbus.getMaxAgeofReader()) || (k < dgbus.getMinAgeofReader()))
+            {
+                MessageBox.Show("Tuổi chưa phù hợp , vui lòng nhập lại");
+                
+            }
             else
-                MessageBox.Show("Thêm thành công");
+            {
+                dg.AddressReader = tbAddress.Text;
+                dg.Email = tbEmail.Text;
+                dg.TypeOfReader = cbTypeofReaders.GetItemText(cbTypeofReaders.SelectedItem);
+                dg.DateCreateReader = dtpDateCreateCard.Value.Date;
+                bool kq = dgbus.add(dg);
+                if (kq == false)
+                    MessageBox.Show("Thêm thất bại. Vui lòng kiểm tra lại dũ liệu");
+                else
+                    MessageBox.Show("Thêm thành công");
+            }
         }
         public void edit(ReaderDTO dg)
         {
@@ -155,6 +169,7 @@ namespace Library_Management
 
         }
 
+       
 
         /*End placeholders*/
     }

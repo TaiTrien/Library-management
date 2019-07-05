@@ -43,7 +43,7 @@ namespace QLTVBUS
         {
             return authDAL.getPresentNumberofAuth();
         }
-        public int getMaxNumberofAuth() // to get max type 
+        public int getMaxNumberofAuth() // to get max author;
         {
             int maxAuth;
             parametersDTO para = new parametersDTO();

@@ -112,6 +112,7 @@
             // cbTypeofReaders
             // 
             this.cbTypeofReaders.BackColor = System.Drawing.SystemColors.Control;
+            this.cbTypeofReaders.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTypeofReaders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTypeofReaders.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbTypeofReaders.FormattingEnabled = true;
@@ -123,12 +124,9 @@
             this.cbTypeofReaders.Name = "cbTypeofReaders";
             this.cbTypeofReaders.Size = new System.Drawing.Size(244, 24);
             this.cbTypeofReaders.TabIndex = 3;
-            this.cbTypeofReaders.Text = "Loại độc giả";
             this.cbTypeofReaders.SelectedIndexChanged += new System.EventHandler(this.cbTypeofReaders_SelectedIndexChanged);
             this.cbTypeofReaders.Enter += new System.EventHandler(this.cbTypeofReaders_Enter);
             this.cbTypeofReaders.Leave += new System.EventHandler(this.cbTypeofReaders_Leave);
-            this.cbTypeofReaders.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-
             // 
             // dtpDob
             // 
@@ -140,6 +138,7 @@
             this.dtpDob.TabIndex = 4;
             this.dtpDob.Value = new System.DateTime(2019, 6, 6, 0, 0, 0, 0);
             this.dtpDob.ValueChanged += new System.EventHandler(this.dtpDob_ValueChanged);
+
             // 
             // label1
             // 

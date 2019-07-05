@@ -12,6 +12,7 @@ namespace QLTVBUS
         static void Main()
         {
         }
+        private parametersDAL paraDAL;
         private bookDAL bookDAL;
         public bookBUS()
         {
@@ -33,5 +34,15 @@ namespace QLTVBUS
         {
             return bookDAL.selectedBook();
         }
+        public int getMaxOfYearExp() // 
+        {
+            int res;
+            paraDAL = new parametersDAL();
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            res = para.NamXuatBanToiDa;
+            return res;
+        }
+   
     }
 }

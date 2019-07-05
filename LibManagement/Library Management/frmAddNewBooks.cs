@@ -62,22 +62,33 @@ namespace Library_Management
         {
             //map data from gui
             bookDTO addBookDTO = new bookDTO();
+            addBookBUS = new bookBUS();
+            DateTimePicker myPicker = new DateTimePicker();
+            myPicker.Value = DateTime.Now;
+            int k = myPicker.Value.Year - dtpPublishYear.Value.Year;
+            if (k > addBookBUS.getMaxOfYearExp())
+            {
+                MessageBox.Show("Năm Xuất Bản không phù hợp");
 
-            addBookDTO.MaSach = tbBookCode.Text;
-            addBookDTO.MaDauSach = cbTitleName.SelectedValue.ToString();
-            addBookDTO.NgayNhap = dtpDateIn.Value;
-            addBookDTO.NamXuatBan = dtpPublishYear.Value;
-            addBookDTO.NhaXuatBan = tbPublisher.Text;
-            addBookDTO.TriGia = nudValue.Value;
-            addBookDTO.TinhTrang = "0";
-
-
-            //add into db
-            bool result = addBookBUS.add(addBookDTO);
-            if ( result == true)
-                MessageBox.Show("Thêm sách thành công");
+            }
             else
-                MessageBox.Show("Thêm sách thất bại");
+            {
+                addBookDTO.MaSach = tbBookCode.Text;
+                addBookDTO.MaDauSach = cbTitleName.SelectedValue.ToString();
+                addBookDTO.NgayNhap = dtpDateIn.Value;
+                addBookDTO.NamXuatBan = dtpPublishYear.Value;
+                addBookDTO.NhaXuatBan = tbPublisher.Text;
+                addBookDTO.TriGia = nudValue.Value;
+                addBookDTO.TinhTrang = "0";
+
+
+                //add into db
+                bool result = addBookBUS.add(addBookDTO);
+                if (result == true)
+                    MessageBox.Show("Thêm sách thành công");
+                else
+                    MessageBox.Show("Thêm sách thất bại");
+            }
         }
 
         private void frmAddNewBooks_Load(object sender, EventArgs e)
@@ -87,6 +98,7 @@ namespace Library_Management
 
         private void LoadTitlesInto_ComboBox()
         {
+            titlesBUS = new titlesBUS();
             List<titlesDTO> listTitles = titlesBUS.selectedTitle();
             if (cbTitleName == null)
             {
