@@ -121,7 +121,7 @@
             this.tbMinAgeReader.Location = new System.Drawing.Point(301, 52);
             this.tbMinAgeReader.Name = "tbMinAgeReader";
             this.tbMinAgeReader.Size = new System.Drawing.Size(145, 34);
-            this.tbMinAgeReader.TabIndex = 1;
+            this.tbMinAgeReader.TabIndex = 3;
             this.tbMinAgeReader.TextChanged += new System.EventHandler(this.tbMinAgeReader_TextChanged);
             this.tbMinAgeReader.Enter += new System.EventHandler(this.tbMinAgeReader_Enter);
             this.tbMinAgeReader.Leave += new System.EventHandler(this.tbMinAgeReader_Leave);
@@ -131,7 +131,7 @@
             this.tbMaxAgeReader.Location = new System.Drawing.Point(301, 101);
             this.tbMaxAgeReader.Name = "tbMaxAgeReader";
             this.tbMaxAgeReader.Size = new System.Drawing.Size(145, 34);
-            this.tbMaxAgeReader.TabIndex = 1;
+            this.tbMaxAgeReader.TabIndex = 4;
             this.tbMaxAgeReader.Enter += new System.EventHandler(this.tbMaxAgeReader_Enter);
             this.tbMaxAgeReader.Leave += new System.EventHandler(this.tbMaxAgeReader_Leave);
             // 
@@ -140,7 +140,7 @@
             this.txTimeExpReader.Location = new System.Drawing.Point(301, 150);
             this.txTimeExpReader.Name = "txTimeExpReader";
             this.txTimeExpReader.Size = new System.Drawing.Size(145, 34);
-            this.txTimeExpReader.TabIndex = 1;
+            this.txTimeExpReader.TabIndex = 5;
             this.txTimeExpReader.Enter += new System.EventHandler(this.txTimeExpReader_Enter);
             this.txTimeExpReader.Leave += new System.EventHandler(this.txTimeExpReader_Leave);
             // 
@@ -149,7 +149,7 @@
             this.txNumberTitles.Location = new System.Drawing.Point(388, 54);
             this.txNumberTitles.Name = "txNumberTitles";
             this.txNumberTitles.Size = new System.Drawing.Size(128, 34);
-            this.txNumberTitles.TabIndex = 1;
+            this.txNumberTitles.TabIndex = 8;
             this.txNumberTitles.Enter += new System.EventHandler(this.txNumberTitles_Enter);
             this.txNumberTitles.Leave += new System.EventHandler(this.txNumberTitles_Leave);
             // 
@@ -158,7 +158,7 @@
             this.tbYearPubish.Location = new System.Drawing.Point(388, 106);
             this.tbYearPubish.Name = "tbYearPubish";
             this.tbYearPubish.Size = new System.Drawing.Size(128, 34);
-            this.tbYearPubish.TabIndex = 1;
+            this.tbYearPubish.TabIndex = 10;
             this.tbYearPubish.Enter += new System.EventHandler(this.tbYearPubish_Enter);
             this.tbYearPubish.Leave += new System.EventHandler(this.tbYearPubish_Leave);
             // 
@@ -167,7 +167,7 @@
             this.tbMaxBookBorrow.Location = new System.Drawing.Point(301, 206);
             this.tbMaxBookBorrow.Name = "tbMaxBookBorrow";
             this.tbMaxBookBorrow.Size = new System.Drawing.Size(145, 34);
-            this.tbMaxBookBorrow.TabIndex = 1;
+            this.tbMaxBookBorrow.TabIndex = 6;
             this.tbMaxBookBorrow.Enter += new System.EventHandler(this.tbMaxBookBorrow_Enter);
             this.tbMaxBookBorrow.Leave += new System.EventHandler(this.tbMaxBookBorrow_Leave);
             // 
@@ -176,7 +176,7 @@
             this.tbMaxDayBorrow.Location = new System.Drawing.Point(301, 265);
             this.tbMaxDayBorrow.Name = "tbMaxDayBorrow";
             this.tbMaxDayBorrow.Size = new System.Drawing.Size(145, 34);
-            this.tbMaxDayBorrow.TabIndex = 1;
+            this.tbMaxDayBorrow.TabIndex = 7;
             this.tbMaxDayBorrow.Enter += new System.EventHandler(this.tbMinBookBorrow_Enter);
             this.tbMaxDayBorrow.Leave += new System.EventHandler(this.tbMaxDayBorrow_Leave);
             // 
@@ -187,7 +187,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(552, 263);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(516, 165);
-            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // groupBox1

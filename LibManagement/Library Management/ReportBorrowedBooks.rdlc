@@ -29,10 +29,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>BÁO CÁO</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>24pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -67,10 +71,15 @@
                           <TextRuns>
                             <TextRun>
                               <Value>THỂ LOẠI</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>15pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -97,10 +106,15 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Số lượng mượn</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>15pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox14</rd:DefaultName>
@@ -127,10 +141,15 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Tỉ lệ</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>15pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox18</rd:DefaultName>
@@ -269,8 +288,8 @@
         <DataSetName>DataSet2</DataSetName>
         <Top>0.22167in</Top>
         <Left>0.53in</Left>
-        <Height>1.775in</Height>
-        <Width>5.45in</Width>
+        <Height>1.77501in</Height>
+        <Width>5.45001in</Width>
         <Style>
           <Border>
             <Style>None</Style>
