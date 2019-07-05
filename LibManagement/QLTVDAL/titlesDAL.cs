@@ -101,6 +101,10 @@ namespace QLTVDAL
         // to delete titles from DAUSACH table and referencing table
         public bool del(titlesDTO titles)
         {
+          //  List <bookDTO> book = new List<bookDTO>();
+           // bookDAL bookDAL = new bookDAL();
+            //book = bookDAL.selectedBook();
+           // var tempBook = book.Select<book => x.MaDauSach = titles.MaDauSach >
             //delete titles from DauSach table
             string queryDelTitles = string.Empty;
             queryDelTitles += "DELETE FROM DAUSACH ";
@@ -113,6 +117,61 @@ namespace QLTVDAL
             string queryDelType = string.Empty;
             queryDelType += "DELETE FROM DAUSACH_THELOAI ";
             queryDelType += "WHERE  MaDauSach = @mds ";
+            //delete titles from SACH table 
+            string queryDelBook = string.Empty;
+            queryDelBook += "DELETE FROM SACH ";
+            queryDelBook += "WHERE  MaDauSach = @mds ";
+            // delete book from MUONSACH table
+            string queryDelBookFromMS = string.Empty;
+            queryDelBookFromMS += "DELETE FROM MUONSACH ";
+            queryDelBookFromMS += "WHERE  MaSach = @ms ";
+            // to delete book from table MUONSACH
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = queryDelBookFromMS;
+                    //cmd.Parameters.AddWithValue("@ms", titles.Ma);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            // to delete titles from table SACH
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = queryDelBook;
+                    cmd.Parameters.AddWithValue("@mds", titles.MaDauSach);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+
             // to delete titles from table DAUSACH_TACGIA
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
             {
@@ -282,8 +341,10 @@ namespace QLTVDAL
 
         {
             string query = string.Empty;
-            query += "SELECT MaDauSach, TenDauSach";
-            query += " FROM DAUSACH";
+            query += "SELECT DAUSACH.MaDauSach, DAUSACH.TenDauSach, ";
+            query +=  "COUNT(*) TONGSACH, SUM(CASE WHEN SACH.DaMuon = 1 THEN 1 ELSE 0 END)  SOLUOTMUON ";
+            query += "FROM SACH inner join DAUSACH on SACH.MaDauSach = DAUSACH.MaDauSach ";
+            query += "GROUP BY DAUSACH.MaDauSach, DAUSACH.TenDauSach";
 
             List<titlesDTO> lsTitles = new List<titlesDTO>();
 
@@ -303,11 +364,19 @@ namespace QLTVDAL
                         reader = cmd.ExecuteReader();
                         if (reader.HasRows == true)
                         {
+                            int temp = 0;
                             while (reader.Read())
                             {
                                 titlesDTO titles = new titlesDTO();
                                 titles.MaDauSach = reader["MaDauSach"].ToString();
                                 titles.TenDauSach = reader["TenDauSach"].ToString();
+                                titles.TongSoLuongTrongKho = int.Parse(reader["TONGSACH"].ToString());
+                                titles.SoLuotMuon = int.Parse(reader["SOLUOTMUON"].ToString());
+                                temp = titles.TongSoLuongTrongKho - titles.SoLuotMuon;
+                                if (temp > 0)
+                                    titles.SoLuongConLai = temp;
+                                else
+                                    titles.SoLuongConLai = 0;
                                 lsTitles.Add(titles);
                             }
                         }

@@ -105,6 +105,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetBorrowedBook.cs">
+      <DependentUpon>DataSetBorrowedBook.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetBorrowedBook.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,18 +136,6 @@
     </Compile>
     <Compile Include="frmAuthsManage.Designer.cs">
       <DependentUpon>frmAuthsManage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportBorrwedBooks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReportBorrwedBooks.Designer.cs">
-      <DependentUpon>frmReportBorrwedBooks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportLateReturn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReportLateReturn.Designer.cs">
-      <DependentUpon>frmReportLateReturn.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRPLateReturn.cs">
       <SubType>Form</SubType>
@@ -268,12 +259,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAuthsManage.resx">
       <DependentUpon>frmAuthsManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReportBorrwedBooks.resx">
-      <DependentUpon>frmReportBorrwedBooks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReportLateReturn.resx">
-      <DependentUpon>frmReportLateReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRPLateReturn.resx">
       <DependentUpon>frmRPLateReturn.cs</DependentUpon>
