@@ -35,6 +35,4 @@ These instructions will get you a copy of the project up and running on your loc
 
 # Authors
   * Võ Văn Tài Triển - University of Information Technology - Software Engineering - Student ID: 1752 1158
-  * Trương Viết Huy Phong - University of Information Technology - Software Engineering - Student ID: 1752 0897
-  * Nguyễn Tuần Anh - University of Information Technology - Software Engineering - Student ID: 1652 0051
   * Nguyễn Thanh Trung - University of Information Technology - Software Engineering - Student ID: 1752 0021

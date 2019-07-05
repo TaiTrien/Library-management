@@ -35,6 +35,8 @@
             this.tbReaderCode = new System.Windows.Forms.TextBox();
             this.btnBorrow = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DateBorrowdtp = new System.Windows.Forms.DateTimePicker();
+            this.tbIdBorrowBook = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +44,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tbIdBorrowBook);
+            this.panel1.Controls.Add(this.DateBorrowdtp);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tbBookCode);
             this.panel1.Controls.Add(this.label1);
@@ -95,17 +99,19 @@
             this.tbReaderCode.Size = new System.Drawing.Size(295, 46);
             this.tbReaderCode.TabIndex = 43;
             this.tbReaderCode.Text = "Mã độc giả";
+            this.tbReaderCode.TextChanged += new System.EventHandler(this.tbReaderCode_TextChanged);
             this.tbReaderCode.Enter += new System.EventHandler(this.tbReaderCode_Enter);
             this.tbReaderCode.Leave += new System.EventHandler(this.tbReaderCode_Leave);
             // 
             // btnBorrow
             // 
-            this.btnBorrow.Location = new System.Drawing.Point(93, 234);
+            this.btnBorrow.Location = new System.Drawing.Point(68, 236);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(270, 75);
             this.btnBorrow.TabIndex = 42;
             this.btnBorrow.Text = "Mượn";
             this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // pictureBox1
             // 
@@ -116,6 +122,21 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // DateBorrowdtp
+            // 
+            this.DateBorrowdtp.Location = new System.Drawing.Point(68, 182);
+            this.DateBorrowdtp.Name = "DateBorrowdtp";
+            this.DateBorrowdtp.Size = new System.Drawing.Size(200, 22);
+            this.DateBorrowdtp.TabIndex = 47;
+            // 
+            // tbIdBorrowBook
+            // 
+            this.tbIdBorrowBook.Location = new System.Drawing.Point(68, 8);
+            this.tbIdBorrowBook.Name = "tbIdBorrowBook";
+            this.tbIdBorrowBook.Size = new System.Drawing.Size(295, 22);
+            this.tbIdBorrowBook.TabIndex = 48;
+
             // 
             // frmBorrowBooks
             // 
@@ -143,5 +164,7 @@
         private System.Windows.Forms.TextBox tbReaderCode;
         private System.Windows.Forms.Button btnBorrow;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker DateBorrowdtp;
+        private System.Windows.Forms.TextBox tbIdBorrowBook;
     }
 }

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpReturnBookDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.tbBookCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbReaderCode = new System.Windows.Forms.TextBox();
             this.btnBorrow = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbReturnBook = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +44,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tbReturnBook);
+            this.panel1.Controls.Add(this.dtpReturnBookDate);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tbBookCode);
             this.panel1.Controls.Add(this.label1);
@@ -51,6 +55,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(418, 331);
             this.panel1.TabIndex = 2;
+            // 
+            // dtpReturnBookDate
+            // 
+            this.dtpReturnBookDate.Location = new System.Drawing.Point(68, 172);
+            this.dtpReturnBookDate.Name = "dtpReturnBookDate";
+            this.dtpReturnBookDate.Size = new System.Drawing.Size(273, 22);
+            this.dtpReturnBookDate.TabIndex = 47;
             // 
             // label2
             // 
@@ -106,6 +117,7 @@
             this.btnBorrow.TabIndex = 42;
             this.btnBorrow.Text = "Trả";
             this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // pictureBox1
             // 
@@ -116,6 +128,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // tbReturnBook
+            // 
+            this.tbReturnBook.Location = new System.Drawing.Point(68, 8);
+            this.tbReturnBook.Name = "tbReturnBook";
+            this.tbReturnBook.Size = new System.Drawing.Size(310, 22);
+            this.tbReturnBook.TabIndex = 48;
+            this.tbReturnBook.TextChanged += new System.EventHandler(this.tbReturnBook_TextChanged);
             // 
             // frmReturnBooks
             // 
@@ -143,5 +163,7 @@
         private System.Windows.Forms.TextBox tbReaderCode;
         private System.Windows.Forms.Button btnBorrow;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dtpReturnBookDate;
+        private System.Windows.Forms.TextBox tbReturnBook;
     }
 }

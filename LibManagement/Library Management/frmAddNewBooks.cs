@@ -60,7 +60,24 @@ namespace Library_Management
         /*End placeholders*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            //map data from gui
+            bookDTO addBookDTO = new bookDTO();
+
+            addBookDTO.MaSach = tbBookCode.Text;
+            addBookDTO.MaDauSach = cbTitleName.SelectedValue.ToString();
+            addBookDTO.NgayNhap = dtpDateIn.Value;
+            addBookDTO.NamXuatBan = dtpPublishYear.Value;
+            addBookDTO.NhaXuatBan = tbPublisher.Text;
+            addBookDTO.TriGia = nudValue.Value;
+            addBookDTO.TinhTrang = "0";
+
+
+            //add into db
+            bool result = addBookBUS.add(addBookDTO);
+            if ( result == true)
+                MessageBox.Show("Thêm sách thành công");
+            else
+                MessageBox.Show("Thêm sách thất bại");
         }
 
         private void frmAddNewBooks_Load(object sender, EventArgs e)

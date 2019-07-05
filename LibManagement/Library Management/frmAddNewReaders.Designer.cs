@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dtpDateCreateCard = new System.Windows.Forms.DateTimePicker();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -59,12 +59,6 @@
             this.dtpDateCreateCard.Name = "dtpDateCreateCard";
             this.dtpDateCreateCard.Size = new System.Drawing.Size(244, 22);
             this.dtpDateCreateCard.TabIndex = 1;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(538, 0);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 8;
             // 
             // tbEmail
             // 
@@ -121,13 +115,20 @@
             this.cbTypeofReaders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTypeofReaders.ForeColor = System.Drawing.SystemColors.GrayText;
             this.cbTypeofReaders.FormattingEnabled = true;
+            this.cbTypeofReaders.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbTypeofReaders.Items.AddRange(new object[] {
+            "X",
+            "Y"});
             this.cbTypeofReaders.Location = new System.Drawing.Point(183, 144);
             this.cbTypeofReaders.Name = "cbTypeofReaders";
             this.cbTypeofReaders.Size = new System.Drawing.Size(244, 24);
             this.cbTypeofReaders.TabIndex = 3;
             this.cbTypeofReaders.Text = "Loại độc giả";
+            this.cbTypeofReaders.SelectedIndexChanged += new System.EventHandler(this.cbTypeofReaders_SelectedIndexChanged);
             this.cbTypeofReaders.Enter += new System.EventHandler(this.cbTypeofReaders_Enter);
             this.cbTypeofReaders.Leave += new System.EventHandler(this.cbTypeofReaders_Leave);
+            this.cbTypeofReaders.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
             // 
             // dtpDob
             // 
@@ -137,6 +138,8 @@
             this.dtpDob.Name = "dtpDob";
             this.dtpDob.Size = new System.Drawing.Size(263, 22);
             this.dtpDob.TabIndex = 4;
+            this.dtpDob.Value = new System.DateTime(2019, 6, 6, 0, 0, 0, 0);
+            this.dtpDob.ValueChanged += new System.EventHandler(this.dtpDob_ValueChanged);
             // 
             // label1
             // 
@@ -232,12 +235,25 @@
             this.btnAdd.Size = new System.Drawing.Size(272, 188);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(591, 128);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(133, 84);
+            this.btnEdit.TabIndex = 47;
+            this.btnEdit.Text = "button1";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Visible = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // frmAddNewReaders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -251,7 +267,6 @@
             this.Controls.Add(this.dtpDob);
             this.Controls.Add(this.cbTypeofReaders);
             this.Controls.Add(this.dtpDateCreateCard);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.tbName);
@@ -259,6 +274,7 @@
             this.Name = "frmAddNewReaders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lập thẻ độc giả";
+            this.Load += new System.EventHandler(this.frmAddNewReaders_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -271,7 +287,6 @@
 
         #endregion
         private System.Windows.Forms.DateTimePicker dtpDateCreateCard;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbAddress;
         private System.Windows.Forms.TextBox tbName;
@@ -288,5 +303,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

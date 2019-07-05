@@ -23,6 +23,15 @@ namespace QLTVBUS
             bool isAdd = bookDAL.add(bookDTO);
             return isAdd;
         }
-       
+
+        public bool del(bookDTO bookDTO)
+        {
+            bool re = bookDAL.del(bookDTO);
+            return re;
+        }
+        public List<bookDTO> selectedBook()
+        {
+            return bookDAL.selectedBook();
+        }
     }
 }

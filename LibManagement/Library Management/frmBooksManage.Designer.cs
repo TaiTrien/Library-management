@@ -30,27 +30,27 @@
         {
             this.pnFooter = new System.Windows.Forms.Panel();
             this.lbReturn = new System.Windows.Forms.Label();
-            this.lbBorrow = new System.Windows.Forms.Label();
-            this.lbSearch = new System.Windows.Forms.Label();
-            this.lbContact = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbDel = new System.Windows.Forms.Label();
-            this.lbAdd = new System.Windows.Forms.Label();
-            this.dgvBooksManage = new System.Windows.Forms.DataGridView();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.lbBorrow = new System.Windows.Forms.Label();
             this.btnBorrow = new System.Windows.Forms.Button();
+            this.lbSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbContact = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbDel = new System.Windows.Forms.Label();
+            this.lbAdd = new System.Windows.Forms.Label();
             this.btnMod = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvBooksManage = new System.Windows.Forms.DataGridView();
             this.pnFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksManage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksManage)).BeginInit();
             this.SuspendLayout();
             // 
             // pnFooter
@@ -87,76 +87,6 @@
             this.lbReturn.TabIndex = 26;
             this.lbReturn.Text = "Trả sách";
             // 
-            // lbBorrow
-            // 
-            this.lbBorrow.AutoSize = true;
-            this.lbBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBorrow.Location = new System.Drawing.Point(334, 79);
-            this.lbBorrow.Name = "lbBorrow";
-            this.lbBorrow.Size = new System.Drawing.Size(69, 24);
-            this.lbBorrow.TabIndex = 24;
-            this.lbBorrow.Text = "Mượn ";
-            // 
-            // lbSearch
-            // 
-            this.lbSearch.AutoSize = true;
-            this.lbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSearch.Location = new System.Drawing.Point(239, 79);
-            this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(82, 24);
-            this.lbSearch.TabIndex = 22;
-            this.lbSearch.Text = "Tra cứu";
-            // 
-            // lbContact
-            // 
-            this.lbContact.AutoSize = true;
-            this.lbContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbContact.Location = new System.Drawing.Point(594, 62);
-            this.lbContact.Name = "lbContact";
-            this.lbContact.Size = new System.Drawing.Size(90, 25);
-            this.lbContact.TabIndex = 17;
-            this.lbContact.Text = "Liên hệ:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(170, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 24);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Sửa";
-            // 
-            // lbDel
-            // 
-            this.lbDel.AutoSize = true;
-            this.lbDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDel.Location = new System.Drawing.Point(90, 79);
-            this.lbDel.Name = "lbDel";
-            this.lbDel.Size = new System.Drawing.Size(48, 24);
-            this.lbDel.TabIndex = 15;
-            this.lbDel.Text = "Xóa";
-            // 
-            // lbAdd
-            // 
-            this.lbAdd.AutoSize = true;
-            this.lbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAdd.Location = new System.Drawing.Point(6, 80);
-            this.lbAdd.Name = "lbAdd";
-            this.lbAdd.Size = new System.Drawing.Size(70, 24);
-            this.lbAdd.TabIndex = 14;
-            this.lbAdd.Text = "Thêm ";
-            // 
-            // dgvBooksManage
-            // 
-            this.dgvBooksManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBooksManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvBooksManage.Location = new System.Drawing.Point(0, 0);
-            this.dgvBooksManage.Name = "dgvBooksManage";
-            this.dgvBooksManage.RowTemplate.Height = 24;
-            this.dgvBooksManage.Size = new System.Drawing.Size(882, 423);
-            this.dgvBooksManage.TabIndex = 2;
-            // 
             // btnReturn
             // 
             this.btnReturn.BackgroundImage = global::Library_Management.Properties.Resources.refresh_button;
@@ -170,6 +100,16 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // lbBorrow
+            // 
+            this.lbBorrow.AutoSize = true;
+            this.lbBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBorrow.Location = new System.Drawing.Point(334, 79);
+            this.lbBorrow.Name = "lbBorrow";
+            this.lbBorrow.Size = new System.Drawing.Size(69, 24);
+            this.lbBorrow.TabIndex = 24;
+            this.lbBorrow.Text = "Mượn ";
+            // 
             // btnBorrow
             // 
             this.btnBorrow.BackgroundImage = global::Library_Management.Properties.Resources.instruction;
@@ -182,6 +122,16 @@
             this.btnBorrow.TabIndex = 23;
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
+            // 
+            // lbSearch
+            // 
+            this.lbSearch.AutoSize = true;
+            this.lbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSearch.Location = new System.Drawing.Point(239, 79);
+            this.lbSearch.Name = "lbSearch";
+            this.lbSearch.Size = new System.Drawing.Size(82, 24);
+            this.lbSearch.TabIndex = 22;
+            this.lbSearch.Text = "Tra cứu";
             // 
             // btnSearch
             // 
@@ -226,6 +176,46 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // lbContact
+            // 
+            this.lbContact.AutoSize = true;
+            this.lbContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContact.Location = new System.Drawing.Point(594, 62);
+            this.lbContact.Name = "lbContact";
+            this.lbContact.Size = new System.Drawing.Size(90, 25);
+            this.lbContact.TabIndex = 17;
+            this.lbContact.Text = "Liên hệ:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(170, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Sửa";
+            // 
+            // lbDel
+            // 
+            this.lbDel.AutoSize = true;
+            this.lbDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDel.Location = new System.Drawing.Point(90, 79);
+            this.lbDel.Name = "lbDel";
+            this.lbDel.Size = new System.Drawing.Size(48, 24);
+            this.lbDel.TabIndex = 15;
+            this.lbDel.Text = "Xóa";
+            // 
+            // lbAdd
+            // 
+            this.lbAdd.AutoSize = true;
+            this.lbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAdd.Location = new System.Drawing.Point(6, 80);
+            this.lbAdd.Name = "lbAdd";
+            this.lbAdd.Size = new System.Drawing.Size(70, 24);
+            this.lbAdd.TabIndex = 14;
+            this.lbAdd.Text = "Thêm ";
+            // 
             // btnMod
             // 
             this.btnMod.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
@@ -249,6 +239,7 @@
             this.btnDel.Size = new System.Drawing.Size(85, 59);
             this.btnDel.TabIndex = 12;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
@@ -263,6 +254,16 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // dgvBooksManage
+            // 
+            this.dgvBooksManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooksManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvBooksManage.Location = new System.Drawing.Point(0, 0);
+            this.dgvBooksManage.Name = "dgvBooksManage";
+            this.dgvBooksManage.RowTemplate.Height = 24;
+            this.dgvBooksManage.Size = new System.Drawing.Size(882, 423);
+            this.dgvBooksManage.TabIndex = 2;
+            // 
             // frmBooksManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,12 +274,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBooksManage";
             this.Text = "frmBooksManag";
+            this.Load += new System.EventHandler(this.frmBooksManage_Load_1);
             this.pnFooter.ResumeLayout(false);
             this.pnFooter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksManage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksManage)).EndInit();
             this.ResumeLayout(false);
 
         }
