@@ -1,0 +1,9 @@
+E:\Study\libdev\LibManagement\QLTVDAL\bin\Debug\QLTVDAL.exe
+E:\Study\libdev\LibManagement\QLTVDAL\bin\Debug\QLTVDAL.pdb
+E:\Study\libdev\LibManagement\QLTVDAL\bin\Debug\QLTVDTO.exe
+E:\Study\libdev\LibManagement\QLTVDAL\bin\Debug\QLTVDTO.pdb
+E:\Study\libdev\LibManagement\QLTVDAL\obj\Debug\QLTVDAL.csprojAssemblyReference.cache
+E:\Study\libdev\LibManagement\QLTVDAL\obj\Debug\QLTVDAL.csproj.CoreCompileInputs.cache
+E:\Study\libdev\LibManagement\QLTVDAL\obj\Debug\QLTVDAL.csproj.CopyComplete
+E:\Study\libdev\LibManagement\QLTVDAL\obj\Debug\QLTVDAL.exe
+E:\Study\libdev\LibManagement\QLTVDAL\obj\Debug\QLTVDAL.pdb

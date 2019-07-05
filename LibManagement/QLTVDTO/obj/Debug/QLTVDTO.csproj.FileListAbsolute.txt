@@ -1,0 +1,6 @@
+E:\Study\libdev\LibManagement\QLTVDTO\bin\Debug\QLTVDTO.exe
+E:\Study\libdev\LibManagement\QLTVDTO\bin\Debug\QLTVDTO.pdb
+E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.csprojAssemblyReference.cache
+E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.csproj.CoreCompileInputs.cache
+E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.exe
+E:\Study\libdev\LibManagement\QLTVDTO\obj\Debug\QLTVDTO.pdb

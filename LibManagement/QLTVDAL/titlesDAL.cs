@@ -26,30 +26,7 @@ namespace QLTVDAL
             string queryAddType = string.Empty;
             queryAddType += "INSERT INTO DAUSACH_THELOAI (MaDauSach, MaTheLoai) ";
             queryAddType += "VALUES (@MaDauSach, @MaTheLoai)";
-            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
-            {
-                // to add titles and name of titles into table DAUSACH
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = con;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = queryAddTitles;
-                    cmd.Parameters.AddWithValue("@MaDauSach", titles.MaDauSach);
-                    cmd.Parameters.AddWithValue("@TenDauSach", titles.TenDauSach);
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        con.Close();
-                        con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return false;
-                    }
-                }
-            }
+            
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
             {
                 using (SqlCommand cmd2 = new SqlCommand())
@@ -96,16 +73,36 @@ namespace QLTVDAL
                     }
                 }
             }
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
+            {
+                // to add titles and name of titles into table DAUSACH
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = queryAddTitles;
+                    cmd.Parameters.AddWithValue("@MaDauSach", titles.MaDauSach);
+                    cmd.Parameters.AddWithValue("@TenDauSach", titles.TenDauSach);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
             return true;
         }
         // to delete titles from DAUSACH table and referencing table
         public bool del(titlesDTO titles)
         {
-          //  List <bookDTO> book = new List<bookDTO>();
-           // bookDAL bookDAL = new bookDAL();
-            //book = bookDAL.selectedBook();
-           // var tempBook = book.Select<book => x.MaDauSach = titles.MaDauSach >
-            //delete titles from DauSach table
+         
             string queryDelTitles = string.Empty;
             queryDelTitles += "DELETE FROM DAUSACH ";
             queryDelTitles += "WHERE MaDauSach = @mds";
@@ -371,8 +368,9 @@ namespace QLTVDAL
                                 titles.MaDauSach = reader["MaDauSach"].ToString();
                                 titles.TenDauSach = reader["TenDauSach"].ToString();
                                 titles.TongSoLuongTrongKho = int.Parse(reader["TONGSACH"].ToString());
-                                titles.SoLuotMuon = int.Parse(reader["SOLUOTMUON"].ToString());
+                                titles.SoLuotMuon = int.Parse(reader["SOLUOTMUON"].ToString());                  
                                 temp = titles.TongSoLuongTrongKho - titles.SoLuotMuon;
+             
                                 if (temp > 0)
                                     titles.SoLuongConLai = temp;
                                 else

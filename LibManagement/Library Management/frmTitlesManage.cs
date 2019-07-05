@@ -58,19 +58,19 @@ namespace Library_Management
             DataGridViewTextBoxColumn clSumTitles = new DataGridViewTextBoxColumn();
             clSumTitles.Name = "sumTitles";
             clSumTitles.HeaderText = "Tổng số lượng";
-            clSumTitles.DataPropertyName = "TongSoLuongTrongKho"; // haven't counted amout of titles yet
+            clSumTitles.DataPropertyName = "TongSoLuongTrongKho"; //  amout of titles yet
             dgvTitlesManage.Columns.Add(clSumTitles);
 
             DataGridViewTextBoxColumn clBorrowedAmoutTitles = new DataGridViewTextBoxColumn();
             clBorrowedAmoutTitles.Name = "borrowedAmoutTitles";
             clBorrowedAmoutTitles.HeaderText = "Số lượng đã mượn";
-            clBorrowedAmoutTitles.DataPropertyName = "SoLuotMuon"; // haven't counted amout of titles are being borrowed yet
+            clBorrowedAmoutTitles.DataPropertyName = "SoLuotMuon"; //  amout of titles are being borrowed yet
             dgvTitlesManage.Columns.Add(clBorrowedAmoutTitles);
 
             DataGridViewTextBoxColumn clRemainingAmoutTitles = new DataGridViewTextBoxColumn();
             clRemainingAmoutTitles.Name = " remainingAmoutTitles";
             clRemainingAmoutTitles.HeaderText = "Số lượng còn lại"; 
-            clRemainingAmoutTitles.DataPropertyName = "SoLuongConLai"; // haven't counted amout of titles are remaining yet
+            clRemainingAmoutTitles.DataPropertyName = "SoLuongConLai"; //  amout of titles are remaining yet
             dgvTitlesManage.Columns.Add(clRemainingAmoutTitles);
         }
         // to create a form to add new titles

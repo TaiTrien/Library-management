@@ -60,7 +60,7 @@ namespace Library_Management
             int maxAuth = authBUS.getMaxNumberofAuth();
             int temp = authBUS.getNumberofAuth(); // to get present number of author
 
-            if (temp >= maxAuth)
+            if (temp >= maxAuth && maxAuth!=0)
             {
                 MessageBox.Show("Số tác giả đã hơn số qui định");
             }
