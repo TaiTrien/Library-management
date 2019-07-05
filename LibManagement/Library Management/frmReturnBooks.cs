@@ -66,9 +66,9 @@ namespace Library_Management
             //add into db
             bool result = returnBUS.Tra(borrowDTO, book, reader);
             if (result == true)
-                MessageBox.Show("Thêm sách thành công");
+                MessageBox.Show("Trả thành công");
             else
-                MessageBox.Show("Thêm sách thất bại");
+                MessageBox.Show("Trả sách thất bại");
 
         }
 
