@@ -227,6 +227,7 @@
             this.btnMod.Size = new System.Drawing.Size(77, 61);
             this.btnMod.TabIndex = 13;
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnDel
             // 

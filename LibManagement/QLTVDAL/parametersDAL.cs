@@ -10,15 +10,17 @@ using QLTVDTO;
 
 namespace QLTVDAL
 {
+   
     public class parametersDAL
     {
+        private parametersDTO para;
         public parametersDTO selectedRegulations() // to select whole of regulations
         {
             string query = string.Empty;
             query += "SELECT * ";
             query += "FROM THAMSO";
 
-            parametersDTO para = new parametersDTO();
+            para = new parametersDTO();
 
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
             {
@@ -61,5 +63,47 @@ namespace QLTVDAL
             }
             return para;
         }
+        public bool CapNhat(parametersDTO pr)
+        {
+
+            string query = string.Empty;
+            query += "UPDATE THAMSO ";
+            query += "SET TuoiToiDaDocGia = @TuoiToiDaDocGia,TuoiToiThieuDocGia = @TuoiToiThieuDocGia,ThoiHanThe = @ThoiHanThe,SoTheLoaiToiDa = @SoTheLoaiToiDa,SoTacGiaToiDa = @SoTacGiaToiDa,NamXuatBanToiDa = @NamXuatBanToiDa,SoSachMuonToiDa = @SoSachMuonToiDa, SoNgayMuonToiDa = @SoNgayMuonToiDa ";
+
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@TuoiToiDaDocGia", pr.TuoiToiDaDocGia);
+                    cmd.Parameters.AddWithValue("@TuoiToiThieuDocGia", pr.TuoiToiThieuDocGia);
+                    cmd.Parameters.AddWithValue("@ThoiHanThe", pr.ThoiHanThe);
+                    cmd.Parameters.AddWithValue("@SoTheLoaiToiDa", pr.SoTheLoaiToiDa);
+                    cmd.Parameters.AddWithValue("@SoTacGiaToiDa", pr.SoTacGiaToiDa);
+                    cmd.Parameters.AddWithValue("@NamXuatBanToiDa", pr.NamXuatBanToiDa);
+                    cmd.Parameters.AddWithValue("@SoSachMuonToiDa", pr.SoSachMuonToiDa);
+                    cmd.Parameters.AddWithValue("@SoNgayMuonToiDa", pr.SoNgayMuonToiDa);
+
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
     }
+   
 }

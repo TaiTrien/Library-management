@@ -46,6 +46,7 @@
     <Compile Include="authBUS.cs" />
     <Compile Include="bookBUS.cs" />
     <Compile Include="BorrowBookBUS.cs" />
+    <Compile Include="ParameterBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReaderBUS.cs" />
     <Compile Include="titlesBUS.cs" />

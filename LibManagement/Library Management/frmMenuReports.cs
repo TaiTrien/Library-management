@@ -29,5 +29,11 @@ namespace Library_Management
             frmRPLateReturn frmLateReturn = new frmRPLateReturn();
             frmLateReturn.ShowDialog();
         }
+
+        private void btnChangeRules_Click(object sender, EventArgs e)
+        {
+            frmAddRule frmAddRule = new frmAddRule();
+            frmAddRule.ShowDialog();
+        }
     }
 }

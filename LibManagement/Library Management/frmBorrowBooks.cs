@@ -14,7 +14,7 @@ namespace Library_Management
     public partial class frmBorrowBooks : Form
     {
         private BorrowBookBUS borrowBUS = new BorrowBookBUS();
-
+        private ReaderBUS ReaderBUS = new ReaderBUS();
         public frmBorrowBooks()
         {
             InitializeComponent();
@@ -63,20 +63,31 @@ namespace Library_Management
             QLTVDTO.borrowbook borrowDTO = new QLTVDTO.borrowbook();
             bookDTO book = new bookDTO();
             ReaderDTO reader = new ReaderDTO();
-
-            book.MaSach = tbBookCode.Text;
+            DateTimePicker myPicker = new DateTimePicker();
+            myPicker.Value = DateTime.Now;
             reader.IdReader = int.Parse(tbReaderCode.Text);
-            borrowDTO.NgayMuonSach = DateBorrowdtp.Value;
-            borrowDTO.Idborrowbook = tbIdBorrowBook.Text;
-
-
-            //add into db
-            bool result = borrowBUS.add(borrowDTO,book,reader);
-            if (result == true)
-                MessageBox.Show("Thêm sách thành công");
+            int k = myPicker.Value.Month - reader.DateCreateReader.Month ;
+            int SoSachMuon = ReaderBUS.SoSachMuon(reader);
+            int SoSachMax = ReaderBUS.getMaxofBorrowBook();
+            if ( (k > ReaderBUS.getTimeofReader()) && (SoSachMuon > SoSachMax))
+            {
+                MessageBox.Show("Đã Hết hạn mượn Thẻ ");
+            }
             else
-                MessageBox.Show("Thêm sách thất bại");
+            {
+                book.MaSach = tbBookCode.Text;
+                borrowDTO.NgayMuonSach = DateBorrowdtp.Value;
+                borrowDTO.Idborrowbook = tbIdBorrowBook.Text;
+                
+                borrowDTO.NgayTraSach = DateBorrowdtp.Value.AddDays(borrowBUS.SoNgayMuonToiDa());
 
+                //add into db
+                bool result = borrowBUS.add(borrowDTO, book, reader);
+                if (result == true)
+                    MessageBox.Show("Thêm sách thành công");
+                else
+                    MessageBox.Show("Thêm sách thất bại");
+            }
 
 
         }

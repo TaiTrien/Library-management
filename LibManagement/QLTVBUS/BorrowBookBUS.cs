@@ -9,6 +9,7 @@ namespace QLTVBUS
 {
     public class BorrowBookBUS
     {
+        private parametersDAL paraDAL;
         BorrowBookDAL br  = new BorrowBookDAL();
         public bool add(borrowbook SachMuon, bookDTO book, ReaderDTO reader)
         {
@@ -21,6 +22,15 @@ namespace QLTVBUS
            
             bool re = br.Return(SachMuon, book, reader);
             return re;
+        }
+        public double SoNgayMuonToiDa() // 
+        {
+            double res;
+            paraDAL = new parametersDAL();
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            res = para.SoNgayMuonToiDa;
+            return res;
         }
     }
 }

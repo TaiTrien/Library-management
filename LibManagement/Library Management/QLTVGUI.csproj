@@ -130,6 +130,12 @@
     <Compile Include="frmAddNewType.Designer.cs">
       <DependentUpon>frmAddNewType.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRule.Designer.cs">
+      <DependentUpon>frmAddRule.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAuthsManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddNewType.resx">
       <DependentUpon>frmAddNewType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRule.resx">
+      <DependentUpon>frmAddRule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAuthsManage.resx">
       <DependentUpon>frmAuthsManage.cs</DependentUpon>

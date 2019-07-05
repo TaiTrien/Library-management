@@ -132,6 +132,50 @@ namespace QLTVDAL
 
             return true;
         }
+        public int SoluongSachDangMuon(ReaderDTO rd)
+        {
+            string query = string.Empty;
+            query += "SELECT COUNT (MUONSACH.MaSach) AS SOSACHMUON ";
+            query += "FROM MUONSACH INNER JOIN THEDOCGIA ON MUONSACH.MaThe = THEDOCGIA.MaThe ";
+            query += "where THEDOCGIA.MaThe = @MaThe ";
+            int res = 0;
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@MaThe", rd.IdReader);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                              
+                                res = int.Parse(reader["SOSACHMUON"].ToString());
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+
+            }
+
+            return res;
+        }
         public List<ReaderDTO> select()
         {
             string query = string.Empty;

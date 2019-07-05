@@ -15,7 +15,7 @@ namespace QLTVBUS
             typeDAL = new typeDAL();
             parametersDAL = new parametersDAL();
         }
-        
+
         public bool add(typeDTO typeDTO)
         {
             bool isAdd = typeDAL.add(typeDTO);
@@ -26,7 +26,7 @@ namespace QLTVBUS
             bool isDel = typeDAL.del(typeDTO);
             return isDel;
         }
-        public bool mod (typeDTO typeDTO)
+        public bool mod(typeDTO typeDTO)
         {
             bool isMod = typeDAL.mod(typeDTO);
             return isMod;
@@ -34,12 +34,12 @@ namespace QLTVBUS
         public List<typeDTO> selectedTypes()
         {
             return typeDAL.selectedTypes();
-        } 
+        }
         public int getNumberofType() // to get present type  in library
         {
             return typeDAL.getPresentNumberofType();
         }
-        public int getMaxNumberofType () // to get max type 
+        public int getMaxNumberofType() // to get max type 
         {
             int maxType;
             parametersDTO para = new parametersDTO();
@@ -47,6 +47,8 @@ namespace QLTVBUS
             maxType = para.SoTheLoaiToiDa;
             return maxType;
         }
+        
+
     }
     
 }

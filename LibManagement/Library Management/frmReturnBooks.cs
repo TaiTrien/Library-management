@@ -60,7 +60,7 @@ namespace Library_Management
 
             book.MaSach = tbBookCode.Text;
             reader.IdReader = int.Parse(tbReaderCode.Text);
-            borrowDTO.NgayTraSach = dtpReturnBookDate.Value;
+            borrowDTO.NgayTraSachThuc = dtpReturnBookDate.Value;
             borrowDTO.Idborrowbook = tbReturnBook.Text;
 
             //add into db

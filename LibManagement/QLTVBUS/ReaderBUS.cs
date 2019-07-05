@@ -12,8 +12,10 @@ namespace QLTVBUS
     {
         private parametersDAL paraDAL;
         private  ReaderDAL dgDal;
+
         public ReaderBUS()
         {
+            paraDAL = new parametersDAL();
             dgDal = new ReaderDAL();
         }
         public bool add(ReaderDTO dg)
@@ -35,10 +37,14 @@ namespace QLTVBUS
         {
             return dgDal.select();
         }
+        public int SoSachMuon(ReaderDTO dg)
+        {
+            int re = dgDal.SoluongSachDangMuon(dg);
+            return re;
+        }
         public int getMaxAgeofReader() // 
         {
             int res;
-            paraDAL = new parametersDAL();
             parametersDTO para = new parametersDTO();
             para = paraDAL.selectedRegulations();
             res = para.TuoiToiDaDocGia;
@@ -50,6 +56,22 @@ namespace QLTVBUS
             parametersDTO para = new parametersDTO();
             para = paraDAL.selectedRegulations();
             res = para.TuoiToiThieuDocGia;
+            return res;
+        }
+        public int getMaxofBorrowBook() // 
+        {
+            int res;
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            res = para.SoSachMuonToiDa;
+            return res;
+        }
+        public int getTimeofReader() // 
+        {
+            int res;
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            res = para.ThoiHanThe;
             return res;
         }
 

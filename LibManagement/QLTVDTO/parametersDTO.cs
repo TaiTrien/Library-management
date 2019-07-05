@@ -15,7 +15,7 @@ namespace QLTVDTO
         private int maxAuth;
         private int maxPublishYear;
         private int maxBorrowedBook;
-        private int maxBorrowDay;
+        private double maxBorrowDay;
 
         public int TuoiToiDaDocGia { get => maxAgeReader; set => maxAgeReader = value; }
         public int TuoiToiThieuDocGia { get => minAgeReader; set => minAgeReader = value; }
@@ -24,6 +24,6 @@ namespace QLTVDTO
         public int SoTacGiaToiDa { get => maxAuth; set => maxAuth = value; }
         public int NamXuatBanToiDa { get => maxPublishYear; set => maxPublishYear = value; } /*Give data about maxium year of book can be received */
         public int SoSachMuonToiDa { get => maxBorrowedBook; set => maxBorrowedBook = value; }
-        public int SoNgayMuonToiDa { get => maxBorrowDay; set => maxBorrowDay = value; }
+        public double SoNgayMuonToiDa { get => maxBorrowDay; set => maxBorrowDay = value; }
     }
 }
