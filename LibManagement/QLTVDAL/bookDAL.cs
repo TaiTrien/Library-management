@@ -25,6 +25,7 @@ namespace QLTVDAL
             string query = string.Empty;
             query += "INSERT INTO SACH (MaSach, MaDauSach, NgayNhap, NXB, NamXuatBan, Gia, DaMuon) ";
             query += "VALUES (@MaSach, @MaDauSach, @NgayNhap, @NXB, @NamXuatBan, @Gia, @DaMuon)";
+
             using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;")) //Init connection to host
             {
 

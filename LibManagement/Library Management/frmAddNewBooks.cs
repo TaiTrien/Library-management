@@ -99,7 +99,7 @@ namespace Library_Management
         private void LoadTitlesInto_ComboBox()
         {
             titlesBUS = new titlesBUS();
-            List<titlesDTO> listTitles = titlesBUS.selectedTitle();
+            List<titlesDTO> listTitles = titlesBUS.selectedTitleall();
             if (cbTitleName == null)
             {
                 MessageBox.Show("DB chưa có thông tin của bất cứ đầu sách nào");

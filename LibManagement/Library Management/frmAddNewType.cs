@@ -57,7 +57,7 @@ namespace Library_Management
 
             int maxType = typeBUS.getMaxNumberofType();
             int temp = typeBUS.getNumberofType(); // to get present number of type 
-            if (temp >= maxType)
+            if (temp >= maxType && maxType !=0 )
             {
                 MessageBox.Show("Số lượng thể loại đã lớn hơn số qui định");
                 return;

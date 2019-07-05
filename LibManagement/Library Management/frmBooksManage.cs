@@ -13,7 +13,7 @@ namespace Library_Management
 {
     public partial class frmBooksManage : Form
     {
-        private QLTVBUS.bookBUS bookBUS;
+        private QLTVBUS.bookBUS bookBUS = new bookBUS();
         private bookDTO bookDTO;
         public frmBooksManage()
         {
@@ -27,6 +27,7 @@ namespace Library_Management
 
         private void LoadDataInto_DataGridViewOfBook()
         {
+
             List<bookDTO> listBook = bookBUS.selectedBook();
             if (listBook == null)
             {

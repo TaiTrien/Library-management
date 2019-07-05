@@ -34,6 +34,10 @@ namespace QLTVBUS
         {
             return titlesDAL.selectedTitle();
         }
-        
+        public List<titlesDTO> selectedTitleall()
+        {
+            return titlesDAL.selectedTitleall();
+        }
+
     }
 }

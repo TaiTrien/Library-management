@@ -393,6 +393,53 @@ namespace QLTVDAL
             }
             return lsTitles;
         }
+        public List<titlesDTO> selectedTitleall()
+
+        {
+            string query = string.Empty;
+            query += "SELECT * ";
+            query += "FROM DAUSACH ";
+
+            List<titlesDTO> lsTitles = new List<titlesDTO>();
+
+            using (SqlConnection con = new SqlConnection(@"server=" + Dns.GetHostName() + ";Trusted_Connection=yes;database=LIBMANAGEMENT;"))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            int temp = 0;
+                            while (reader.Read())
+                            {
+                                titlesDTO titles = new titlesDTO();
+                                titles.MaDauSach = reader["MaDauSach"].ToString();
+                                titles.TenDauSach = reader["TenDauSach"].ToString();
+                                lsTitles.Add(titles);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return lsTitles;
+        }
     }
 }
 
