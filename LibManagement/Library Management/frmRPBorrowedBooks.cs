@@ -27,11 +27,17 @@ namespace Library_Management
 
         private void frmRPBorrowedBooks_Load(object sender, EventArgs e)
         {
-            frmReportBorrwedBooks frmReport = new frmReportBorrwedBooks();
-            frmReport.TopLevel = false;
-            this.Controls.Add(frmReport);
-            this.pnReport.Hide();
-            frmReport.Show();
+            // TODO: This line of code loads data into the 'DataSetBorrowedBook.THELOAISACH' table. You can move, or remove it, as needed.
+            this.THELOAISACHTableAdapter.Fill(this.DataSetBorrowedBook.THELOAISACH, Decimal.Parse(dtpMonth.Text), Decimal.Parse(dtpYear.Text));
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btnCreateReport_Click(object sender, EventArgs e)
+        {
+            this.THELOAISACHTableAdapter.Fill(this.DataSetBorrowedBook.THELOAISACH, Decimal.Parse(dtpMonth.Text), Decimal.Parse(dtpYear.Text));
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

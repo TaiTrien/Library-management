@@ -789,16 +789,21 @@ FROM     MUONSACH INNER JOIN
                   DAUSACH INNER JOIN
                   DAUSACH_THELOAI ON DAUSACH.MaDauSach = DAUSACH_THELOAI.MaTheLoai INNER JOIN
                   THELOAISACH ON DAUSACH_THELOAI.MaTheLoai = THELOAISACH.MaTheLoai ON SACH.MaDauSach = DAUSACH.MaDauSach
+WHERE  (MONTH(MUONSACH.NgayMuon) = @ThangMuon) AND (YEAR(MUONSACH.NgayMuon) = @NamMuon)
 GROUP BY THELOAISACH.TenTheLoai";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThangMuon", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NamMuon", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetBorrowedBook.THELOAISACHDataTable dataTable) {
+        public virtual int Fill(DataSetBorrowedBook.THELOAISACHDataTable dataTable, decimal ThangMuon, decimal NamMuon) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(ThangMuon));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(NamMuon));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -810,8 +815,10 @@ GROUP BY THELOAISACH.TenTheLoai";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetBorrowedBook.THELOAISACHDataTable GetData() {
+        public virtual DataSetBorrowedBook.THELOAISACHDataTable GetData(decimal ThangMuon, decimal NamMuon) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(ThangMuon));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(NamMuon));
             DataSetBorrowedBook.THELOAISACHDataTable dataTable = new DataSetBorrowedBook.THELOAISACHDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

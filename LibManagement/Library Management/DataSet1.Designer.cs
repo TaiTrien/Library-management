@@ -832,16 +832,20 @@ FROM     MUONSACH INNER JOIN
                   NGUOIDUNG ON NGUOIDUNG.MaNguoiDung = MUONSACH.MaNguoiDung INNER JOIN
                   SACH ON SACH.MaSach = MUONSACH.MaSach INNER JOIN
                   DAUSACH ON DAUSACH.MaDauSach = SACH.MaDauSach
-WHERE  (DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) > 0)";
+WHERE  (DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) > 0) AND (MONTH(MUONSACH.NgayMuon) = @ThangMuon) AND (YEAR(MUONSACH.NgayMuon) = @NamMuon)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThangMuon", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NamMuon", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.DataTable1DataTable dataTable) {
+        public virtual int Fill(DataSet1.DataTable1DataTable dataTable, decimal ThangMuon, decimal NamMuon) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(ThangMuon));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(NamMuon));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -853,8 +857,10 @@ WHERE  (DATEDIFF(dd, MUONSACH.NgayMuon, MUONSACH.NgayTraThucTe) > 0)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.DataTable1DataTable GetData() {
+        public virtual DataSet1.DataTable1DataTable GetData(decimal ThangMuon, decimal NamMuon) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(ThangMuon));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(NamMuon));
             DataSet1.DataTable1DataTable dataTable = new DataSet1.DataTable1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
