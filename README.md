@@ -28,8 +28,7 @@ Librarian (or manager) can also change the policy about adding new members, addi
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Presiquities INSTALL SQL SERVER
-If you don't already have the SQL SERVER Database Server installed, you will need to install it to use this project. If it is installed, you can skip to step 4.
-
+If you don't already have the SQL SERVER Database Server installed, you will need to install it to use this project
 ## Installing
 Run createDBQLTV file to set up database for this project
 
