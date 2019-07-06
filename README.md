@@ -27,11 +27,14 @@ Librarian (or manager) can also change the policy about adding new members, addi
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Presiquities INSTALL SQL SERVER
-If you don't already have the SQL SERVER Database Server installed, you will need to install it to use this project
+## Presiquities INSTALL SQL SERVER version 2017
+If you don't already have the SQL SERVER Database Server installed, you will need to install it to use this project.
+Then install Visual studio version 2017 to run this project.
 ## Installing
-Run createDBQLTV file to set up database for this project
-
+* Change connection string to : SQLCMD -S 'YOUR SERVER NAME' -E -i createDBQLTV.sql. You can find YOUR SERVER NAME in microsoft sql server management studio.
+* Run createDBQLTV.cmd file to set up database for this project. 
+* Open Library Management.sln then change DATASOURCE = "YOUR SERVER NAME" in QLTVGUI/App.config .
+* Start project and enjoy yourself.
 # Contributing 
  * For reporting bug about an incorrect file not being processed, open a new issue.
  * PRs are always welcome to improve exisiting system.
