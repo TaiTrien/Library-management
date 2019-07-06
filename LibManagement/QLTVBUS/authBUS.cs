@@ -9,9 +9,11 @@ namespace QLTVBUS
     public class authBUS
     {
         private authDAL authDAL;
+        private parametersDAL paraDAL;
         public authBUS()
         {
             authDAL = new authDAL();
+            paraDAL = new parametersDAL();
         }
 
         public bool add(authDTO authDTO)
@@ -37,7 +39,18 @@ namespace QLTVBUS
         {
             return authDAL.selectedAuthReferenceToTitle(titlesDTO);
         }
-
+        public int getNumberofAuth() // to get present type  in library
+        {
+            return authDAL.getPresentNumberofAuth();
+        }
+        public int getMaxNumberofAuth() // to get max author;
+        {
+            int maxAuth;
+            parametersDTO para = new parametersDTO();
+            para = paraDAL.selectedRegulations();
+            maxAuth = para.SoTacGiaToiDa;
+            return maxAuth;
+        }
 
     }
 }

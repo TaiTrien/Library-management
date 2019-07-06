@@ -83,6 +83,7 @@
             this.btnChangeRules.Size = new System.Drawing.Size(211, 159);
             this.btnChangeRules.TabIndex = 8;
             this.btnChangeRules.UseVisualStyleBackColor = false;
+            this.btnChangeRules.Click += new System.EventHandler(this.btnChangeRules_Click);
             // 
             // lbLateReturn
             // 

@@ -32,6 +32,11 @@ namespace Library_Management
                 tbSearchBar.ForeColor = Color.Gray;
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+           
+        }
         // end place holder
     }
 }

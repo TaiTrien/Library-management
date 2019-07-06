@@ -54,16 +54,27 @@ namespace Library_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            typeDTO typeDTO = new typeDTO();
-            //to map data from gui
-            typeDTO.maTheLoai = tbTypeCode.Text;
-            typeDTO.tenTheLoai = tbTypeName.Text;
 
-            bool result = typeBUS.add(typeDTO);
-            if (result == true)
-                MessageBox.Show("Thêm thể loại thành công");
-            else
-                MessageBox.Show("Thêm thể loại thất bại");
+            int maxType = typeBUS.getMaxNumberofType();
+            int temp = typeBUS.getNumberofType(); // to get present number of type 
+            if (temp >= maxType && maxType !=0 )
+            {
+                MessageBox.Show("Số lượng thể loại đã lớn hơn số qui định");
+                return;
+            }
+            else 
+            {
+                typeDTO typeDTO = new typeDTO();
+                //to map data from gui
+                typeDTO.maTheLoai = tbTypeCode.Text;
+                typeDTO.tenTheLoai = tbTypeName.Text;
+
+                bool result = typeBUS.add(typeDTO);
+                if (result == true)
+                    MessageBox.Show("Thêm thể loại thành công");
+                else
+                    MessageBox.Show("Thêm thể loại thất bại");
+            }
         }
 
         private void frmAddNewType_Load(object sender, EventArgs e)

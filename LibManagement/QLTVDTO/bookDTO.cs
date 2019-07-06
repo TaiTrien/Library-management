@@ -16,6 +16,7 @@ namespace QLTVDTO
             private string publisher;
             private decimal price;
             private DateTime dateIn;
+            private string status;
 
             public string MaDauSach { get => titlesCode; set => titlesCode = value; }
             public string MaSach { get => bookCode; set => bookCode = value; }
@@ -23,8 +24,8 @@ namespace QLTVDTO
             public string NhaXuatBan { get => publisher; set => publisher = value; }
             public DateTime NgayNhap { get => dateIn; set => dateIn = value; }
             public decimal TriGia { get => price; set => price = value; }
-
-        }
+            public string TinhTrang { get => status; set => status = value; }
+    }
     }
 
 

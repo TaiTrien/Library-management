@@ -16,13 +16,28 @@ namespace Library_Management
             InitializeComponent();
             //Custom date time pick to display only month
             dtpMonth.Format = DateTimePickerFormat.Custom;
-            dtpMonth.CustomFormat = "mmmm";
+            dtpMonth.CustomFormat = "MM";
             dtpMonth.ShowUpDown = true;
            
             //Custom date time pick to display only year
             dtpYear.Format = DateTimePickerFormat.Custom;
             dtpYear.CustomFormat = "yyyy";
             dtpYear.ShowUpDown = true;
+        }
+
+        private void frmRPBorrowedBooks_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'DataSetBorrowedBook.THELOAISACH' table. You can move, or remove it, as needed.
+            this.THELOAISACHTableAdapter.Fill(this.DataSetBorrowedBook.THELOAISACH, Decimal.Parse(dtpMonth.Text), Decimal.Parse(dtpYear.Text));
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btnCreateReport_Click(object sender, EventArgs e)
+        {
+            this.THELOAISACHTableAdapter.Fill(this.DataSetBorrowedBook.THELOAISACH, Decimal.Parse(dtpMonth.Text), Decimal.Parse(dtpYear.Text));
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

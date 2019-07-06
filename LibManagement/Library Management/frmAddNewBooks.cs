@@ -60,7 +60,35 @@ namespace Library_Management
         /*End placeholders*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            //map data from gui
+            bookDTO addBookDTO = new bookDTO();
+            addBookBUS = new bookBUS();
+            DateTimePicker myPicker = new DateTimePicker();
+            myPicker.Value = DateTime.Now;
+            int k = myPicker.Value.Year - dtpPublishYear.Value.Year;
+            if (k > addBookBUS.getMaxOfYearExp())
+            {
+                MessageBox.Show("Năm xuất bản không phù hợp");
+
+            }
+            else
+            {
+                addBookDTO.MaSach = tbBookCode.Text;
+                addBookDTO.MaDauSach = cbTitleName.SelectedValue.ToString();
+                addBookDTO.NgayNhap = dtpDateIn.Value;
+                addBookDTO.NamXuatBan = dtpPublishYear.Value;
+                addBookDTO.NhaXuatBan = tbPublisher.Text;
+                addBookDTO.TriGia = nudValue.Value;
+                addBookDTO.TinhTrang = "0";
+
+
+                //add into db
+                bool result = addBookBUS.add(addBookDTO);
+                if (result == true)
+                    MessageBox.Show("Thêm sách thành công");
+                else
+                    MessageBox.Show("Thêm sách thất bại");
+            }
         }
 
         private void frmAddNewBooks_Load(object sender, EventArgs e)
@@ -70,7 +98,8 @@ namespace Library_Management
 
         private void LoadTitlesInto_ComboBox()
         {
-            List<titlesDTO> listTitles = titlesBUS.selectedTitle();
+            titlesBUS = new titlesBUS();
+            List<titlesDTO> listTitles = titlesBUS.selectedTitleall();
             if (cbTitleName == null)
             {
                 MessageBox.Show("DB chưa có thông tin của bất cứ đầu sách nào");
